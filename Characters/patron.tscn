@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://btq4g3h0fm8dx"]
+
+[ext_resource type="Script" uid="uid://bxp01ke813yri" path="res://Characters/patron.gd" id="1_ny15e"]
+[ext_resource type="Texture2D" uid="uid://dsd2hpwrvhqhf" path="res://icon.svg" id="2_0xwc4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ch7jl"]
+size = Vector2(125, 125)
+
+[node name="Patron" type="CharacterBody2D"]
+script = ExtResource("1_ny15e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_ch7jl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.9999996, 0.21522921, 0.2155627, 1)
+self_modulate = Color(0.99999994, 0.44440594, 0.060627602, 1)
+texture = ExtResource("2_0xwc4")
+
+[node name="Timer" type="Timer" parent="."]
