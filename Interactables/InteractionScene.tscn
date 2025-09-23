@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb5dnqrlwef6q"]
+
+[ext_resource type="Script" uid="uid://uvuqwjwvp67k" path="res://Interactables/InteractionSystem.gd" id="1_4wu3s"]
+[ext_resource type="Texture2D" uid="uid://dsd2hpwrvhqhf" path="res://icon.svg" id="2_30e8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30e8w"]
+size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrmnv"]
+size = Vector2(128, 128)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_4wu3s")
+duration = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(320, 128)
+shape = SubResource("RectangleShape2D_30e8w")
+
+[node name="Timer" type="Timer" parent="Area2D"]
+one_shot = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Player"]]
+position = Vector2(320, 128)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_30e8w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_yrmnv")
