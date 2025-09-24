@@ -24,6 +24,7 @@ func spawn_blood() -> void:
 		return
 	var blood = blood_scene.instantiate()
 	blood.global_position = global_position + _movement * -1 * (randf() * blood_splat_range)
+	blood.rotation = (_movement * -1).angle()
 	get_tree().root.add_child(blood)
 
 # Signals
