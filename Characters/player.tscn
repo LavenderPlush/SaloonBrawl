@@ -7,22 +7,6 @@
 radius = 30.5
 height = 113.0
 
-[sub_resource type="Animation" id="Animation_eovys"]
-resource_name = "idle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(2.0705302, 1.5157168, 1.5691682),
-"update": 0,
-"values": [0.12217304763960307, -0.12217304763960307, 0.12217304763960307]
-}
-
 [sub_resource type="Animation" id="Animation_vb825"]
 length = 0.001
 tracks/0/type = "value"
@@ -38,13 +22,29 @@ tracks/0/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_eovys"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(2.0705302, 1.5157168, 1.5691682),
+"update": 0,
+"values": [0.12217304763960309, -0.12217304763960309, 0.12217304763960309]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vb825"]
 _data = {
 &"RESET": SubResource("Animation_vb825"),
 &"idle": SubResource("Animation_eovys")
 }
 
-[node name="Player" type="CharacterBody2D" groups=["Hitable"]]
+[node name="Player" type="CharacterBody2D" groups=["Hitable", "Player"]]
 script = ExtResource("1_eovys")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
