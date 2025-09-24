@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Patron
 
+signal death
+
 var _targets: Array = []
 var _magasine: int = 0
 
@@ -13,6 +15,10 @@ var _magasine: int = 0
 
 @onready var timer: Timer = $Timer
 var bullet_scene: PackedScene = preload("res://Characters/bullet.tscn")
+
+@onready var particles: GPUParticles2D = $GPUParticles2D
+
+@export var health: int = 5
 
 func _ready() -> void:
 	_magasine = magasine_size
@@ -28,14 +34,25 @@ func _shoot(target_pos: Vector2) -> void:
 	var movement: Vector2 = dir.normalized() * bullet_speed
 	var start_pos: Vector2 = global_position + dir.normalized() * 100
 	
+	if abs(dir.angle()) < Vector2.DOWN.angle():
+		scale.x = 1
+	else:
+		scale.x = -1
+	
 	var bullet: Bullet = bullet_scene.instantiate()
 	bullet.fire(start_pos, movement)
 	get_tree().root.add_child(bullet)
+	
+	particles.emitting = true
 
 
 func set_targets(targets):
 	_targets = targets
 
+func hit():
+	health -= 1
+	if health < 1:
+		emit_signal("death", self)
 
 #Signals
 func _on_timer_timeout() -> void:

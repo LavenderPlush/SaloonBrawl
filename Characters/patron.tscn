@@ -1,21 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://btq4g3h0fm8dx"]
+[gd_scene load_steps=5 format=3 uid="uid://btq4g3h0fm8dx"]
 
 [ext_resource type="Script" uid="uid://bxp01ke813yri" path="res://Characters/patron.gd" id="1_ny15e"]
-[ext_resource type="Texture2D" uid="uid://dsd2hpwrvhqhf" path="res://icon.svg" id="2_0xwc4"]
+[ext_resource type="Texture2D" uid="uid://dcor01tamrbx2" path="res://Assets/saloon_NPC_outlaw.png" id="2_ny15e"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ch7jl"]
-size = Vector2(125, 125)
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ny15e"]
+particle_flag_disable_z = true
+angle_min = 90.000015
+angle_max = 90.000015
+spread = 180.0
+initial_velocity_min = 300.0
+initial_velocity_max = 400.0
+gravity = Vector3(0, 98, 0)
+scale_min = 2.0
+scale_max = 5.0
 
-[node name="Patron" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0xwc4"]
+radius = 44.5
+height = 127.0
+
+[node name="Patron" type="CharacterBody2D" groups=["Hitable"]]
 script = ExtResource("1_ny15e")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(54, -16)
+emitting = false
+amount = 20
+lifetime = 0.09999999999999999
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_ny15e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ny15e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -0.5)
-shape = SubResource("RectangleShape2D_ch7jl")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.9999996, 0.21522921, 0.2155627, 1)
-self_modulate = Color(0.99999994, 0.44440594, 0.060627602, 1)
-texture = ExtResource("2_0xwc4")
+shape = SubResource("CapsuleShape2D_0xwc4")
 
 [node name="Timer" type="Timer" parent="."]

@@ -5,9 +5,11 @@ extends CharacterBody2D
 
 var is_stunned: bool = false
 @onready var timer: Timer = $Timer
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
 	timer.connect("timeout", _on_timer_timeout)
+	animation_player.play("idle")
 
 func _physics_process(_delta: float) -> void:
 	if not is_stunned:
