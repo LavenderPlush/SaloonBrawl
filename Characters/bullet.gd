@@ -17,5 +17,8 @@ func fire(start_pos: Vector2, movement: Vector2):
 
 
 # Signals
-func _on_body_entered(_body: Node2D) -> void:
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Hitable"):
+		body.hit()
+	
 	queue_free()
