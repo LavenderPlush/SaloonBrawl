@@ -1,4 +1,7 @@
 extends Area2D
+class_name interactable
+
+signal cleaned
 
 @export var duration: float = 2
 var progress: float = 0
@@ -40,6 +43,5 @@ func _on_body_exited(object):
 			print("Progress saved: ", progress)
 	
 func _on_timer_timeout():
-	print("Interaction complete, deleting object")
 	progress = 0
-	queue_free()
+	emit_signal("cleaned")
