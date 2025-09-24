@@ -1,13 +1,20 @@
 extends CharacterBody2D
 
 @export var move_speed: int = 500
+@export var hit_cooldown: float = 1.0
+
+var is_stunned: bool = false
+@onready var timer: Timer = $Timer
+
+func _ready() -> void:
+	timer.connect("timeout", _on_timer_timeout)
 
 func _physics_process(_delta: float) -> void:
-	var move_direction: Vector2 = _get_input_direction()
-	
-	velocity = move_direction * move_speed
-	move_and_slide()
-
+	if not is_stunned:
+		var move_direction: Vector2 = _get_input_direction()
+		
+		velocity = move_direction * move_speed
+		move_and_slide()
 
 func _get_input_direction() -> Vector2:
 	var direction = Vector2(0.0,0.0)
@@ -22,3 +29,13 @@ func _get_input_direction() -> Vector2:
 		direction += Vector2.DOWN
 	
 	return direction.normalized()
+
+
+func hit():
+	is_stunned = true
+	timer.start(hit_cooldown)
+
+
+#Signals
+func _on_timer_timeout():
+	is_stunned = false
