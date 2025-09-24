@@ -1,7 +1,7 @@
 extends Area2D
 class_name interactable
 
-signal cleaned
+signal done_interacting
 
 @export var duration: float = 2
 var progress: float = 0
@@ -44,4 +44,4 @@ func _on_body_exited(object):
 	
 func _on_timer_timeout():
 	progress = 0
-	emit_signal("cleaned")
+	emit_signal("done_interacting")
