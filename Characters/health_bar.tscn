@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0c8du2lvs7ty"]
+[gd_scene load_steps=3 format=3 uid="uid://dr68ia5h2q7jy"]
 
-[ext_resource type="PackedScene" uid="uid://cky1b3nsd08dt" path="res://Characters/heart.tscn" id="1_dpdxb"]
+[ext_resource type="PackedScene" uid="uid://st0dq2gcu4fh" path="res://Characters/heart.tscn" id="1_dpdxb"]
+[ext_resource type="Script" uid="uid://047gyib03tlw" path="res://Characters/health_bar.gd" id="1_onk12"]
 
 [node name="HealthBar" type="Control"]
 layout_direction = 3
@@ -9,6 +10,7 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 grow_horizontal = 0
+script = ExtResource("1_onk12")
 
 [node name="HeartContainer" type="HBoxContainer" parent="."]
 custom_minimum_size = Vector2(1000, 0)
@@ -27,7 +29,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Heart2" parent="HeartContainer/MarginContainer2" instance=ExtResource("1_dpdxb")]
+[node name="Heart" parent="HeartContainer/MarginContainer2" instance=ExtResource("1_dpdxb")]
 
 [node name="MarginContainer3" type="MarginContainer" parent="HeartContainer"]
 layout_mode = 2

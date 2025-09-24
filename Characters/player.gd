@@ -1,4 +1,8 @@
 extends CharacterBody2D
+class_name Player
+
+signal player_hit
+signal player_death
 
 @export var move_speed: int = 500
 @export var hit_cooldown: float = 1.0
@@ -6,6 +10,10 @@ extends CharacterBody2D
 var is_stunned: bool = false
 @onready var timer: Timer = $Timer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+#NOTE hardcoded health: if changed also update the health bar
+var _health: int = 5
+
 
 func _ready() -> void:
 	timer.connect("timeout", _on_timer_timeout)
@@ -36,6 +44,12 @@ func _get_input_direction() -> Vector2:
 func hit():
 	is_stunned = true
 	timer.start(hit_cooldown)
+	
+	_health -= 1
+	if _health < 1:
+		player_death.emit()
+	else:
+		player_hit.emit()
 
 
 #Signals
