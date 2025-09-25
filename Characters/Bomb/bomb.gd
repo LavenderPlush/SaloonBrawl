@@ -58,4 +58,4 @@ func _on_timer_timeout():
 func _on_body_entered(body: Node2D):
 	if body.is_in_group("Hitable"):
 		body.hit()
-	blow_up()
+	call_deferred("blow_up")
