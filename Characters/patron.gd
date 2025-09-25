@@ -16,6 +16,9 @@ var _magasine: int = 0
 @onready var timer: Timer = $Timer
 var bullet_scene: PackedScene = preload("res://Characters/bullet.tscn")
 
+@export var bomb_chance: float = 0.1
+var bomb_scene: PackedScene = preload("res://Characters/Bomb/bomb.tscn")
+
 @onready var particles: GPUParticles2D = $GPUParticles2D
 
 @export var health: int = 5
@@ -39,11 +42,18 @@ func _shoot(target_pos: Vector2) -> void:
 	else:
 		scale.x = -1
 	
-	var bullet: Bullet = bullet_scene.instantiate()
-	bullet.fire(start_pos, movement)
-	get_tree().root.add_child(bullet)
+	#NOTE consider abstracting out projectiles
+	if randf() < bomb_chance:
+		var bomb = bomb_scene.instantiate()
+		bomb.fire(start_pos, movement)
+		get_tree().root.add_child(bomb)
+	else:
+		var bullet = bullet_scene.instantiate()
+		bullet.fire(start_pos, movement)
+		get_tree().root.add_child(bullet)
+		_magasine -= 1
 	
-	particles.emitting = true
+		particles.emitting = true
 
 
 func set_targets(targets):
@@ -60,7 +70,6 @@ func _on_timer_timeout() -> void:
 		_shoot(_targets.pick_random())
 	
 	if _magasine > 0:
-		_magasine -= 1
 		timer.start(time_between_shots)
 	else:
 		_magasine = magasine_size
