@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://st0dq2gcu4fh"]
 
-[ext_resource type="Script" uid="uid://cfpbsa7g7bc6" path="res://Characters/heart.gd" id="1_88nr2"]
+[ext_resource type="Script" uid="uid://cfpbsa7g7bc6" path="res://UI/Healthbar/heart.gd" id="1_88nr2"]
 [ext_resource type="Texture2D" uid="uid://cqau62butvr8c" path="res://Assets/saloon_asset_hp_full.png" id="2_88nr2"]
 
 [node name="Heart" type="Node2D"]

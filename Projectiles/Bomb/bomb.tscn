@@ -1,50 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://d21egl2e7g0as"]
 
-[ext_resource type="Script" uid="uid://d0v1rp54lhw30" path="res://Characters/Bomb/bomb.gd" id="1_s2m16"]
+[ext_resource type="Script" uid="uid://d0v1rp54lhw30" path="res://Projectiles/Bomb/bomb.gd" id="1_s2m16"]
 [ext_resource type="Texture2D" uid="uid://dmg2kyv1u4gi3" path="res://Assets/saloon_asset_bomb.png" id="2_maj5q"]
 [ext_resource type="Texture2D" uid="uid://dlrm7awfs8pma" path="res://Assets/saloon_asset_fire.png" id="3_maj5q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sh5ep"]
 radius = 27.166155
-
-[sub_resource type="Animation" id="Animation_sh5ep"]
-resource_name = "explode"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.01),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("2_maj5q"), ExtResource("3_maj5q")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.01),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.01),
-"transitions": PackedFloat32Array(0, 1),
-"update": 0,
-"values": [-1.5707963267948966, 0.0]
-}
 
 [sub_resource type="Animation" id="Animation_akvds"]
 length = 0.001
@@ -83,6 +44,45 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [-1.5707964]
+}
+
+[sub_resource type="Animation" id="Animation_sh5ep"]
+resource_name = "explode"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_maj5q"), ExtResource("3_maj5q")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.01),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [-1.5707963267948966, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kmgjo"]

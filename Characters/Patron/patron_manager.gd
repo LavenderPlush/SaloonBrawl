@@ -3,7 +3,7 @@ class_name EnemyManager
 
 @export var respawn_time: int = 5
 
-var patron_scene: PackedScene = preload("res://Characters/patron.tscn")
+var patron_scene: PackedScene = preload("res://Characters/Patron/patron.tscn")
 var patrons: Array[Patron] = []
 
 func _ready() -> void:

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bebswochjmdn6"]
 
 [ext_resource type="PackedScene" uid="uid://cggmu20aob1uq" path="res://Maps/Wild West Saloon.tmx" id="1_cm30e"]
-[ext_resource type="PackedScene" uid="uid://dhyyi853mkcb3" path="res://Characters/enemy_manager.tscn" id="3_tngpi"]
-[ext_resource type="PackedScene" uid="uid://btq4g3h0fm8dx" path="res://Characters/patron.tscn" id="4_kqypi"]
-[ext_resource type="PackedScene" uid="uid://cokg6av2uax0d" path="res://game_manager.tscn" id="5_kqypi"]
-[ext_resource type="PackedScene" uid="uid://crj7p5vn5aya1" path="res://Interactables/beer_pool.tscn" id="6_5k6n7"]
+[ext_resource type="PackedScene" uid="uid://dhyyi853mkcb3" path="res://Characters/Patron/patron_manager.tscn" id="3_tngpi"]
+[ext_resource type="PackedScene" uid="uid://btq4g3h0fm8dx" path="res://Characters/Patron/patron.tscn" id="4_kqypi"]
+[ext_resource type="PackedScene" uid="uid://cokg6av2uax0d" path="res://GameManager/game_manager.tscn" id="5_kqypi"]
+[ext_resource type="PackedScene" uid="uid://crj7p5vn5aya1" path="res://Interactables/Pools/beer_pool.tscn" id="6_5k6n7"]
 
 [node name="Wild West Saloon" instance=ExtResource("1_cm30e")]
 

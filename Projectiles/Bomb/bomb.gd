@@ -12,7 +12,7 @@ var _velocity: Vector2 = Vector2.ZERO
 @export var fragment_count = 5
 @export var fragment_speed = 200
 var _fragment_angle = 2 * PI / fragment_count
-var fragment = preload("res://Characters/bullet.tscn")
+var fragment = preload("res://Projectiles/Bullet/bullet.tscn")
 
 var _blowing_up = false
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
