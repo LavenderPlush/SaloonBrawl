@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cokg6av2uax0d"]
+[gd_scene load_steps=5 format=3 uid="uid://dck4ccx4m7072"]
 
 [ext_resource type="Script" uid="uid://brxrxdok8bn0k" path="res://game_manager.gd" id="1_70yv6"]
 [ext_resource type="PackedScene" uid="uid://5jxd2d3xp2u" path="res://Characters/player.tscn" id="2_o2178"]
 [ext_resource type="PackedScene" uid="uid://dr68ia5h2q7jy" path="res://Characters/health_bar.tscn" id="3_d5upp"]
+[ext_resource type="AudioStream" uid="uid://7o7qei6mc1as" path="res://Assets/saloon_rag.mp3" id="4_d5upp"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_70yv6")
@@ -17,3 +18,8 @@ offset_left = -586.0
 offset_top = -288.0
 offset_right = -586.0
 offset_bottom = -288.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_d5upp")
+autoplay = true
+parameters/looping = true

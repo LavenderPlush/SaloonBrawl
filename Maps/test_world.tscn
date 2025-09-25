@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy0qyrku32exa"]
+
+[ext_resource type="PackedScene" uid="uid://dhyyi853mkcb3" path="res://Characters/enemy_manager.tscn" id="1_o6oxs"]
+[ext_resource type="PackedScene" uid="uid://btq4g3h0fm8dx" path="res://Characters/patron.tscn" id="2_7uogd"]
+[ext_resource type="PackedScene" uid="uid://dck4ccx4m7072" path="res://game_manager.tscn" id="3_7uogd"]
+
+[node name="TestWorld" type="Node2D"]
+
+[node name="EnemyManager" parent="." instance=ExtResource("1_o6oxs")]
+
+[node name="Patron" parent="EnemyManager" instance=ExtResource("2_7uogd")]
+position = Vector2(212, 241)
+
+[node name="Patron2" parent="EnemyManager" instance=ExtResource("2_7uogd")]
+position = Vector2(1006, 509)
+
+[node name="Patron3" parent="EnemyManager" instance=ExtResource("2_7uogd")]
+position = Vector2(833, 96)
+
+[node name="GameManager" parent="." instance=ExtResource("3_7uogd")]
