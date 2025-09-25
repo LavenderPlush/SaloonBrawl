@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bebswochjmdn6"]
+
+[ext_resource type="PackedScene" uid="uid://cggmu20aob1uq" path="res://Maps/Wild West Saloon.tmx" id="1_cm30e"]
+[ext_resource type="PackedScene" uid="uid://5jxd2d3xp2u" path="res://Characters/player.tscn" id="3_y8myg"]
+
+[node name="Wild West Saloon" instance=ExtResource("1_cm30e")]
+
+[node name="Tiles" parent="." index="0"]
+collision_visibility_mode = 1
+
+[node name="Player" parent="." index="3" instance=ExtResource("3_y8myg")]
+position = Vector2(1227, 1308)
