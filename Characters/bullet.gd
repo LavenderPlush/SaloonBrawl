@@ -33,4 +33,5 @@ func _on_body_entered(body: Node2D) -> void:
 		body.hit()
 		call_deferred("spawn_blood")
 	
-	queue_free()
+	if body.name != "Furniture": #Remove when cartoony tables are added.
+		queue_free()

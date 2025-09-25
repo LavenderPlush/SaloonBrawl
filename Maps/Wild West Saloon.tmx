@@ -1,67 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="128" tileheight="128" infinite="0" nextlayerid="5" nextobjectid="1">
- <editorsettings>
-  <export target="../Assets/Wild West Saloon test.tscn" format="tscn"/>
- </editorsettings>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="21" height="20" tilewidth="128" tileheight="128" infinite="0" nextlayerid="8" nextobjectid="1">
  <tileset firstgid="1" name="old house tile (1)" tilewidth="128" tileheight="128" tilecount="88" columns="8">
   <image source="old_house_tile_1.png" width="1024" height="1408"/>
-  <tile id="0">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-    <object id="2" x="-32" y="97"/>
-   </objectgroup>
-  </tile>
-  <tile id="1">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="2">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="3">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
   <tile id="4">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="5">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="6">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="7">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="16">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="17">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="18">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="19">
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="128" height="128"/>
    </objectgroup>
@@ -71,24 +12,9 @@
     <object id="1" x="0" y="0" width="128" height="128"/>
    </objectgroup>
   </tile>
-  <tile id="21">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="22">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
-  <tile id="23">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
-   </objectgroup>
-  </tile>
   <tile id="40">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="0" y="0" width="128" height="128"/>
    </objectgroup>
   </tile>
   <tile id="41">
@@ -122,8 +48,8 @@
    </objectgroup>
   </tile>
   <tile id="48">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="0" y="0" width="128" height="128"/>
    </objectgroup>
   </tile>
   <tile id="49">
@@ -137,6 +63,11 @@
    </objectgroup>
   </tile>
   <tile id="51">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="52">
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="128" height="128"/>
    </objectgroup>
@@ -157,8 +88,8 @@
    </objectgroup>
   </tile>
   <tile id="58">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="0" y="0" width="128" height="128"/>
    </objectgroup>
   </tile>
   <tile id="59">
@@ -207,8 +138,8 @@
    </objectgroup>
   </tile>
   <tile id="72">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="128" height="128"/>
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="0" y="0" width="128" height="128"/>
    </objectgroup>
   </tile>
   <tile id="73">
@@ -231,85 +162,261 @@
     <object id="1" x="0" y="0" width="128" height="128"/>
    </objectgroup>
   </tile>
-  <tile id="81">
+ </tileset>
+ <tileset firstgid="89" name="old house objects (1)" tilewidth="128" tileheight="128" tilecount="160" columns="10">
+  <image source="old_house_objects_1.png" width="1280" height="2048"/>
+  <tile id="2">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="64" y="0" width="64" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="64" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="64" y="0" width="64" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="15">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="64" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="16">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="17">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="18">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="20">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="21">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="22">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="23">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="30">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="31">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="32">
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="33">
+   <objectgroup draworder="index" id="3">
+    <object id="4" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="64">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="65">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="66">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="67">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="110">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="120">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="130">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="140">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="141">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="64" width="128" height="64"/>
+    <object id="2" x="-81" y="60"/>
+   </objectgroup>
+  </tile>
+  <tile id="142">
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="0" y="64" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="143">
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="0" y="64" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="151">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="152">
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="153">
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="128" height="128"/>
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="89" name="old house objects (1)" tilewidth="128" tileheight="128" tilecount="160" columns="10">
-  <image source="old_house_objects_1.png" width="1280" height="2048"/>
- </tileset>
- <layer id="1" name="Tiles" width="30" height="20">
+ <layer id="5" name="Tiles" width="21" height="20">
   <data encoding="csv">
-45,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,47,
-51,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,44,5,5,5,5,5,5,5,5,44,
-51,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,52,21,21,21,21,21,21,21,21,52,
-51,28,29,30,30,28,28,31,29,31,28,28,28,28,29,30,28,28,28,28,52,39,39,28,29,30,28,32,32,52,
-51,28,37,31,40,28,28,30,37,38,31,28,31,32,37,38,28,28,28,28,52,28,39,28,37,38,28,28,28,52,
-51,28,28,28,29,30,28,28,28,28,39,28,39,32,28,28,28,28,28,29,52,40,32,29,30,28,39,28,28,55,
-51,28,30,30,30,27,30,28,30,30,28,31,39,28,28,28,35,39,40,32,60,39,28,28,31,28,31,28,28,55,
-51,28,29,30,28,30,28,30,28,30,30,39,32,28,28,28,28,28,39,29,44,28,29,28,28,28,28,29,30,55,
-51,28,37,38,28,28,28,28,31,37,38,29,40,39,28,28,29,30,28,30,60,28,28,28,28,28,28,37,38,55,
-51,28,27,28,30,32,28,28,39,40,28,31,31,32,32,28,37,38,28,31,40,28,31,28,28,28,28,28,32,55,
-51,31,31,32,39,40,28,28,28,28,28,39,30,27,39,31,32,32,39,32,40,40,39,28,39,28,31,30,28,55,
-51,28,39,29,30,27,28,28,28,28,28,37,31,30,28,31,40,28,31,32,28,31,29,30,28,28,37,38,32,55,
-51,28,30,37,38,30,36,40,28,29,32,29,29,35,30,39,28,29,39,28,44,38,40,38,31,28,40,32,32,55,
-51,32,28,28,29,30,28,28,40,40,32,39,40,40,31,32,40,29,29,39,52,28,28,40,28,28,28,39,32,55,
-51,28,28,31,37,38,28,28,40,28,31,30,30,28,31,31,27,37,38,28,52,28,28,28,28,31,28,28,28,55,
-51,28,31,39,40,28,28,28,28,28,39,37,28,36,32,39,38,28,28,32,52,28,28,31,28,29,30,28,28,55,
-51,27,39,30,28,27,28,27,28,27,28,27,28,30,29,40,38,28,27,28,52,28,28,28,31,40,38,29,30,55,
-51,35,36,35,36,35,36,40,36,35,36,40,36,35,32,31,36,28,35,36,52,28,28,39,28,28,28,37,38,55,
-61,42,42,42,42,42,42,42,42,42,42,42,42,43,31,39,41,42,42,42,50,42,42,42,42,42,42,42,42,63,
-46,58,58,58,58,58,58,58,58,58,58,58,58,59,39,40,57,58,58,58,58,58,58,58,58,58,58,58,58,46
+45,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,47,
+53,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,49,
+53,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,49,
+53,28,29,30,30,28,28,31,29,31,28,28,28,28,29,30,28,28,28,28,49,
+53,27,37,31,40,28,28,30,37,38,29,28,31,32,38,29,28,28,28,28,49,
+53,36,28,28,29,30,28,28,28,28,30,30,39,32,28,28,28,28,28,29,49,
+53,28,30,30,30,27,30,28,30,30,28,31,39,28,28,28,35,39,40,32,49,
+53,28,29,30,28,30,28,30,28,30,30,39,32,28,28,28,28,28,39,29,49,
+53,28,37,38,28,28,28,28,31,37,38,29,40,39,28,28,29,30,28,30,49,
+53,28,27,28,30,32,28,28,39,40,28,31,31,32,32,28,37,28,29,31,49,
+53,31,31,32,39,40,28,28,28,28,28,39,39,38,27,28,35,27,35,32,49,
+53,28,39,29,30,27,28,28,28,28,32,39,40,35,28,35,29,27,28,29,49,
+53,28,30,37,38,30,36,40,28,29,32,40,39,40,27,28,37,29,28,29,49,
+53,32,28,28,29,30,28,28,28,40,32,39,40,40,35,38,28,29,36,37,49,
+53,28,28,31,37,38,28,28,40,28,31,40,32,28,31,31,27,37,38,28,49,
+53,28,31,39,40,28,28,28,28,31,39,39,31,36,32,39,38,28,28,32,49,
+53,27,39,30,28,27,28,27,28,39,31,40,28,30,29,40,38,28,27,28,49,
+53,35,36,35,36,35,36,40,36,29,31,40,36,35,32,31,36,28,35,36,49,
+61,42,42,42,42,42,42,42,42,43,39,32,41,42,42,42,42,42,42,42,63,
+46,58,58,58,58,58,58,58,58,59,40,31,57,58,58,58,58,58,58,58,58
 </data>
  </layer>
- <layer id="4" name="Deco" width="30" height="20">
+ <layer id="7" name="Deco" width="21" height="20">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,139,140,141,140,141,140,141,141,141,142,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,149,150,151,150,151,150,151,151,151,152,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,139,140,141,140,141,141,142,0,0,0,0,0,0,0,0,0,0,0,0,139,140,141,140,141,142,0,0,
-0,0,0,149,150,151,150,151,151,152,0,0,0,0,0,0,0,0,0,0,0,0,149,150,151,150,151,152,0,0,
-0,0,0,139,140,141,140,141,141,142,0,0,0,0,0,0,0,0,0,0,0,0,139,140,141,140,141,142,0,0,
-0,0,0,149,150,151,150,151,151,152,0,0,0,0,0,0,0,0,0,0,0,0,149,150,151,150,151,152,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,139,140,141,140,141,140,141,141,141,142,0,0,0,0,0,0,0,0,0,0,
+0,149,150,151,150,151,150,151,151,151,152,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,139,140,141,140,141,141,142,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,149,150,151,150,151,151,152,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,139,140,141,140,141,141,142,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,149,150,151,150,151,151,152,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="3" name="Furniture" width="30" height="20">
+ <layer id="6" name="Furniture" width="21" height="20">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,167,168,
-0,89,90,89,90,0,0,89,90,0,0,0,0,117,0,0,0,101,102,0,0,0,0,172,117,174,175,176,177,178,
-0,99,100,99,100,143,144,99,100,145,146,0,0,0,0,0,0,111,112,0,0,93,94,182,183,184,185,89,90,188,
-0,109,110,109,110,153,154,109,110,155,156,0,0,0,0,0,0,121,122,0,0,103,104,192,193,194,195,99,100,198,
-0,119,120,119,120,0,0,119,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,202,203,204,205,109,110,208,
-0,230,231,231,231,231,231,231,231,232,0,0,0,0,0,123,0,131,0,123,0,0,0,0,0,0,0,119,120,0,
-0,240,241,241,241,241,241,241,241,242,0,0,0,0,0,95,96,96,96,97,0,0,0,123,0,123,0,123,215,0,
-0,0,123,0,123,0,123,0,123,0,0,0,0,0,0,105,106,106,106,107,0,0,0,95,96,96,96,97,225,0,
-0,199,0,0,0,0,0,0,0,0,0,0,0,0,0,0,131,0,131,0,0,0,0,0,123,0,123,0,235,0,
-0,209,0,0,131,0,131,0,131,0,0,0,0,0,0,0,0,0,0,0,0,0,0,131,0,131,0,0,199,0,
-0,219,0,0,95,96,96,96,97,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,96,96,97,0,209,0,
-0,229,0,0,105,106,106,106,107,0,0,0,0,0,0,0,0,0,0,0,0,0,0,105,106,106,107,0,219,0,
-0,0,0,0,131,0,131,0,131,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,131,0,131,0,229,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,131,0,123,0,0,0,123,0,123,0,131,215,0,
-0,0,123,0,131,0,123,0,0,0,123,0,131,0,0,0,0,95,96,97,0,0,0,95,96,96,96,97,225,0,
-0,0,95,96,96,96,97,0,0,95,96,96,97,0,0,0,0,105,106,107,0,0,0,105,106,106,106,107,235,0,
-0,0,105,106,106,106,107,0,0,105,106,106,107,0,0,0,0,123,0,123,0,0,0,0,123,0,123,0,0,0,
-0,0,0,131,0,123,0,0,0,131,0,123,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,89,90,89,90,0,0,89,90,0,0,0,117,0,0,0,101,102,0,0,0,
+0,99,100,99,100,143,144,99,100,145,146,0,0,0,93,94,111,112,93,94,0,
+0,109,110,109,110,153,154,109,110,155,156,0,0,0,103,104,121,122,103,104,0,
+0,119,120,119,120,0,0,119,120,0,0,0,0,0,0,0,0,0,0,0,0,
+0,230,231,231,231,231,231,231,231,232,0,0,0,0,0,0,0,0,0,0,0,
+0,240,241,241,241,241,241,241,241,242,0,0,0,0,0,95,96,96,97,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,105,106,106,107,0,0,
+0,199,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,209,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,199,0,
+0,219,0,0,95,96,96,96,97,0,0,0,0,0,0,0,0,0,0,209,0,
+0,229,0,0,105,106,106,106,107,0,0,0,0,0,0,0,0,0,0,219,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,229,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,95,96,96,96,97,0,0,0,0,0,0,0,95,96,96,96,97,0,0,
+0,0,105,106,106,106,107,0,0,0,0,0,0,0,105,106,106,106,107,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
 </map>
