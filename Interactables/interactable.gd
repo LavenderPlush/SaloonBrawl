@@ -11,7 +11,7 @@ var isInteracting: bool = false
 func _ready():
 	var timer = $Timer
 	if timer:
-		timer.connect("timeout", _on_timer_timeout)	
+		timer.connect("timeout", _on_timer_timeout)
 	self.connect("body_entered", _on_body_entered)
 	self.connect("body_exited", _on_body_exited)
 
@@ -20,13 +20,11 @@ func _process(_delta):
 		if not isInteracting:
 			isInteracting = true
 			$Timer.start(duration - progress)
-		print("Progress: ", duration - $Timer.time_left, " of ", progress)
 	else:
 		if isInteracting:
 			isInteracting = false
 			progress = duration - $Timer.time_left
 			$Timer.stop()
-			print("Progress saved: ", progress)
 	
 func _on_body_entered(object):
 	if object.is_in_group("Player"):

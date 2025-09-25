@@ -6,7 +6,7 @@ signal death
 var _targets: Array = []
 var _magasine: int = 0
 
-@export var time_between_shots = 1.5
+@export var time_between_shots: float = 1.5
 @export var time_reload: float = 3
 @export var magasine_size: int = 6
 
@@ -14,10 +14,10 @@ var _magasine: int = 0
 @export var spray_angle_degrees: float = 20
 
 @onready var timer: Timer = $Timer
-var bullet_scene: PackedScene = preload("res://Characters/bullet.tscn")
+var bullet_scene: PackedScene = preload("res://Projectiles/Bullet/bullet.tscn")
 
 @export var bomb_chance: float = 0.1
-var bomb_scene: PackedScene = preload("res://Characters/Bomb/bomb.tscn")
+var bomb_scene: PackedScene = preload("res://Projectiles/Bomb/bomb.tscn")
 
 @onready var particles: GPUParticles2D = $GPUParticles2D
 

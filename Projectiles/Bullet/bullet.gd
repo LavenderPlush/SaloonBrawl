@@ -6,7 +6,7 @@ class_name Bullet
 @export var blood_chance: float = 0.2
 
 var _movement: Vector2 = Vector2(0,0)
-var blood_scene: PackedScene = preload("res://Interactables/blood.tscn")
+var blood_scene: PackedScene = preload("res://Interactables/Pools/blood.tscn")
 
 func _ready() -> void:
 	connect("body_entered", _on_body_entered)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://6lb7tgxym2rv" path="res://Assets/saloon_asset_blood.png" id="1_5xl8x"]
 [ext_resource type="PackedScene" uid="uid://cb5dnqrlwef6q" path="res://Interactables/interactable.tscn" id="2_5xl8x"]
-[ext_resource type="Script" uid="uid://cyhc4t1isl46p" path="res://Interactables/spill.gd" id="2_lq2r4"]
+[ext_resource type="Script" uid="uid://cyhc4t1isl46p" path="res://Interactables/Pools/pool.gd" id="2_lq2r4"]
 
 [node name="Blood" type="Node2D"]
 z_index = -1
