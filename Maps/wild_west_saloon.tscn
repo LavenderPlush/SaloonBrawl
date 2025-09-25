@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cggmu20aob1uq" path="res://Maps/Wild West Saloon.tmx" id="1_cm30e"]
 [ext_resource type="PackedScene" uid="uid://dhyyi853mkcb3" path="res://Characters/enemy_manager.tscn" id="3_tngpi"]
-[ext_resource type="PackedScene" uid="uid://5jxd2d3xp2u" path="res://Characters/player.tscn" id="3_y8myg"]
 [ext_resource type="PackedScene" uid="uid://btq4g3h0fm8dx" path="res://Characters/patron.tscn" id="4_kqypi"]
-[ext_resource type="PackedScene" path="res://Interactables/beer_pool.tscn" id="5_kqypi"]
+[ext_resource type="PackedScene" uid="uid://cokg6av2uax0d" path="res://game_manager.tscn" id="5_kqypi"]
+[ext_resource type="PackedScene" path="res://Interactables/beer_pool.tscn" id="6_5k6n7"]
 
 [node name="Wild West Saloon" instance=ExtResource("1_cm30e")]
 
@@ -19,12 +19,7 @@ z_index = -2
 z_index = -1
 collision_visibility_mode = 1
 
-[node name="Player" parent="." index="3" instance=ExtResource("3_y8myg")]
-position = Vector2(1282, 1349)
-
-[node name="Camera2D" type="Camera2D" parent="Player" index="4"]
-
-[node name="EnemyManager" parent="." index="4" instance=ExtResource("3_tngpi")]
+[node name="EnemyManager" parent="." index="3" instance=ExtResource("3_tngpi")]
 
 [node name="Patron" parent="EnemyManager" index="0" instance=ExtResource("4_kqypi")]
 position = Vector2(887, 984)
@@ -47,23 +42,28 @@ position = Vector2(1719, 829)
 [node name="Patron7" parent="EnemyManager" index="6" instance=ExtResource("4_kqypi")]
 position = Vector2(2013, 1640)
 
-[node name="BeerPool" parent="." index="5" instance=ExtResource("5_kqypi")]
+[node name="BeerPools" type="Node" parent="." index="4"]
+
+[node name="BeerPool" parent="BeerPools" index="0" instance=ExtResource("6_5k6n7")]
 position = Vector2(1319, 975)
 
-[node name="BeerPool2" parent="." index="6" instance=ExtResource("5_kqypi")]
+[node name="BeerPool2" parent="BeerPools" index="1" instance=ExtResource("6_5k6n7")]
 position = Vector2(905, 1222)
 
-[node name="BeerPool3" parent="." index="7" instance=ExtResource("5_kqypi")]
+[node name="BeerPool3" parent="BeerPools" index="2" instance=ExtResource("6_5k6n7")]
 position = Vector2(1851, 1723)
 
-[node name="BeerPool4" parent="." index="8" instance=ExtResource("5_kqypi")]
-position = Vector2(951, 1928)
+[node name="BeerPool4" parent="BeerPools" index="3" instance=ExtResource("6_5k6n7")]
+position = Vector2(973, 1978.0001)
 
-[node name="BeerPool5" parent="." index="9" instance=ExtResource("5_kqypi")]
+[node name="BeerPool5" parent="BeerPools" index="4" instance=ExtResource("6_5k6n7")]
 position = Vector2(1946, 1043)
 
-[node name="BeerPool6" parent="." index="10" instance=ExtResource("5_kqypi")]
+[node name="BeerPool6" parent="BeerPools" index="5" instance=ExtResource("6_5k6n7")]
 position = Vector2(1479, 1374)
 
-[node name="BeerPool7" parent="." index="11" instance=ExtResource("5_kqypi")]
+[node name="BeerPool7" parent="BeerPools" index="6" instance=ExtResource("6_5k6n7")]
 position = Vector2(1122, 1674)
+
+[node name="GameManager" parent="." index="5" instance=ExtResource("5_kqypi")]
+position = Vector2(1214, 873)
