@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://st0dq2gcu4fh"]
 
 [ext_resource type="Script" uid="uid://cfpbsa7g7bc6" path="res://Characters/heart.gd" id="1_88nr2"]
-[ext_resource type="Texture2D" uid="uid://dsd2hpwrvhqhf" path="res://icon.svg" id="1_dsl1r"]
+[ext_resource type="Texture2D" uid="uid://cqau62butvr8c" path="res://Assets/saloon_asset_hp_full.png" id="2_88nr2"]
 
 [node name="Heart" type="Node2D"]
 script = ExtResource("1_88nr2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.49411765, 0, 0, 1)
-texture = ExtResource("1_dsl1r")
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_88nr2")

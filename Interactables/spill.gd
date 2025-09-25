@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 func _ready() -> void:
 	$Interactable.connect("done_interacting", _on_cleaned)

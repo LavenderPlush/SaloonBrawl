@@ -24,6 +24,7 @@ func spawn_blood() -> void:
 		return
 	var blood = blood_scene.instantiate()
 	blood.global_position = global_position + _movement * -1 * (randf() * blood_splat_range)
+	blood.rotation = (_movement * -1).angle()
 	get_tree().root.add_child(blood)
 
 # Signals
@@ -32,4 +33,5 @@ func _on_body_entered(body: Node2D) -> void:
 		body.hit()
 		call_deferred("spawn_blood")
 	
-	queue_free()
+	if body.name != "Furniture": #Remove when cartoony tables are added.
+		queue_free()

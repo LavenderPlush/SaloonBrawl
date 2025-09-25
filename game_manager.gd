@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var health_bar: HealthBar = $HealthBar
+@onready var health_bar: HealthBar = $Player/Camera2D/HealthBar
 @onready var player: Player = $Player
 
 func _ready():
