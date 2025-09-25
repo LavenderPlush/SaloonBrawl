@@ -4,20 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://dhyyi853mkcb3" path="res://Characters/enemy_manager.tscn" id="3_tngpi"]
 [ext_resource type="PackedScene" uid="uid://btq4g3h0fm8dx" path="res://Characters/patron.tscn" id="4_kqypi"]
 [ext_resource type="PackedScene" uid="uid://cokg6av2uax0d" path="res://game_manager.tscn" id="5_kqypi"]
-[ext_resource type="PackedScene" path="res://Interactables/beer_pool.tscn" id="6_5k6n7"]
+[ext_resource type="PackedScene" uid="uid://crj7p5vn5aya1" path="res://Interactables/beer_pool.tscn" id="6_5k6n7"]
 
 [node name="Wild West Saloon" instance=ExtResource("1_cm30e")]
 
 [node name="Tiles" parent="." index="0"]
 z_index = -2
-collision_visibility_mode = 1
 
 [node name="Deco" parent="." index="1"]
 z_index = -2
 
 [node name="Furniture" parent="." index="2"]
 z_index = -1
-collision_visibility_mode = 1
 
 [node name="EnemyManager" parent="." index="3" instance=ExtResource("3_tngpi")]
 

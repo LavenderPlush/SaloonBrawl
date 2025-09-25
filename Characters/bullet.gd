@@ -1,7 +1,8 @@
 extends Area2D
 class_name Bullet
 
-@export var blood_splat_range: float = 2.0
+@export var blood_splat_max: float = 80.0
+@export var blood_splat_min: float = 50.0
 @export var blood_chance: float = 0.2
 
 var _movement: Vector2 = Vector2(0,0)
@@ -23,7 +24,10 @@ func spawn_blood() -> void:
 	if randf() > blood_chance:
 		return
 	var blood = blood_scene.instantiate()
-	blood.global_position = global_position + _movement * -1 * (randf() * blood_splat_range)
+	blood.global_position = (global_position
+		+ _movement.normalized() * -1
+		* (blood_splat_min + randf() * blood_splat_max - blood_splat_min)
+	)
 	blood.rotation = (_movement * -1).angle()
 	get_tree().root.add_child(blood)
 

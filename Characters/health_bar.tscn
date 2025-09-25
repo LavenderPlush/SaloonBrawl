@@ -13,7 +13,7 @@ grow_horizontal = 0
 script = ExtResource("1_onk12")
 
 [node name="HeartContainer" type="HBoxContainer" parent="."]
-custom_minimum_size = Vector2(1000, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

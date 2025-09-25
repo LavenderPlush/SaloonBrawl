@@ -25,6 +25,7 @@ func respawn(pos: Vector2):
 	var patron = patron_scene.instantiate()
 	patron.global_position = pos
 	add_child(patron)
+	patron.connect("death", on_patron_death)
 	var tmp_patrons = patrons.duplicate()
 	tmp_patrons.append(patron)
 	update_patron_targets(tmp_patrons)
