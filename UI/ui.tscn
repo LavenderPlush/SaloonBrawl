@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://du41rt0ip1vcv"]
+
+[ext_resource type="PackedScene" uid="uid://dr68ia5h2q7jy" path="res://UI/Healthbar/health_bar.tscn" id="1_2fwl4"]
+[ext_resource type="FontFile" uid="uid://cfp5qhlmds0gi" path="res://Assets/font.png" id="2_dajm1"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="HealthBar" parent="." instance=ExtResource("1_2fwl4")]
+offset_left = 1937.0001
+offset_right = 1937.0001
+
+[node name="Money" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 280.0
+offset_bottom = 145.0
+theme_override_fonts/font = ExtResource("2_dajm1")
+theme_override_font_sizes/font_size = 136
+text = "$0.0"

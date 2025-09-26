@@ -2,24 +2,18 @@
 
 [ext_resource type="Script" uid="uid://brxrxdok8bn0k" path="res://GameManager/game_manager.gd" id="1_70yv6"]
 [ext_resource type="PackedScene" uid="uid://5jxd2d3xp2u" path="res://Characters/Player/player.tscn" id="2_o2178"]
-[ext_resource type="PackedScene" uid="uid://dr68ia5h2q7jy" path="res://UI/Healthbar/health_bar.tscn" id="3_d5upp"]
 [ext_resource type="AudioStream" uid="uid://7o7qei6mc1as" path="res://Assets/saloon_rag.mp3" id="4_d5upp"]
+[ext_resource type="PackedScene" uid="uid://du41rt0ip1vcv" path="res://UI/ui.tscn" id="4_jij60"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_70yv6")
 
 [node name="Player" parent="." instance=ExtResource("2_o2178")]
-position = Vector2(160, 471)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-
-[node name="HealthBar" parent="Player/Camera2D" instance=ExtResource("3_d5upp")]
-offset_left = -586.0
-offset_top = -288.0
-offset_right = -586.0
-offset_bottom = -288.0
+position = Vector2(1, 2)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_d5upp")
 autoplay = true
 parameters/looping = true
+
+[node name="UI" parent="." instance=ExtResource("4_jij60")]
