@@ -4,6 +4,7 @@ class_name interactable
 signal done_interacting
 
 @export var duration: float = 2
+@export var pay: float = 0.1
 var progress: float = 0
 var inRange: bool = false
 var isInteracting: bool = false
@@ -42,4 +43,5 @@ func _on_body_exited(object):
 	
 func _on_timer_timeout():
 	progress = 0
+	EventBus.emit_signal("add_money", pay)
 	emit_signal("done_interacting")
