@@ -4,14 +4,14 @@ class_name Barman
 
 var targets: Array = []
 
-@export var time_between_shots: float = 1
+@export var time_between_shots: float = 3
 @export var bullet_speed: int = 600
 @export var spray_angle_degrees: float = 10
 
 @onready var timer: Timer = $Timer
 @onready var manager: EnemyManager = %EnemyManager
 
-var bullet_scene: PackedScene = preload("res://Projectiles/Bullet/bullet.tscn")
+var bullet_scene: PackedScene = preload("res://Projectiles/Beer/beer.tscn")
 
 func _ready() -> void:
 	#timer.connect("timeout", _on_timer_timeout)
@@ -44,7 +44,7 @@ func shoot(target_pos: Vector2) -> void:
 		scale.x = -1
 		
 	var bullet = bullet_scene.instantiate()
-	bullet.fire(start_pos, movement)
+	bullet.fire(start_pos, movement, self)
 	get_tree().root.add_child(bullet)
 
 func _on_timer_timeout() -> void:
