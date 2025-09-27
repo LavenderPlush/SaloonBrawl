@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bebswochjmdn6"]
+[gd_scene load_steps=7 format=3 uid="uid://bebswochjmdn6"]
 
 [ext_resource type="PackedScene" uid="uid://cggmu20aob1uq" path="res://Maps/Wild West Saloon.tmx" id="1_cm30e"]
+[ext_resource type="PackedScene" uid="uid://ds4sukpftjhcj" path="res://Characters/Barman/barman.tscn" id="2_5k6n7"]
 [ext_resource type="PackedScene" uid="uid://dhyyi853mkcb3" path="res://Characters/Patron/patron_manager.tscn" id="3_tngpi"]
 [ext_resource type="PackedScene" uid="uid://btq4g3h0fm8dx" path="res://Characters/Patron/patron.tscn" id="4_kqypi"]
 [ext_resource type="PackedScene" uid="uid://cokg6av2uax0d" path="res://GameManager/game_manager.tscn" id="5_kqypi"]
@@ -64,8 +65,12 @@ position = Vector2(1479, 1374)
 position = Vector2(1122, 1674)
 
 [node name="GameManager" parent="." index="5" instance=ExtResource("5_kqypi")]
-position = Vector2(1419, 1253)
+position = Vector2(1247, 621)
 
 [node name="Camera2D" type="Camera2D" parent="." index="6"]
 position = Vector2(1341, 1272)
 zoom = Vector2(0.5, 0.5)
+
+[node name="Barman" parent="." index="7" node_paths=PackedStringArray("manager") instance=ExtResource("2_5k6n7")]
+position = Vector2(890, 624)
+manager = NodePath("../EnemyManager")
