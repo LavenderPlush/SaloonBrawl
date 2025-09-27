@@ -9,12 +9,11 @@ var targets: Array = []
 @export var spray_angle_degrees: float = 10
 
 @onready var timer: Timer = $Timer
-@onready var manager: EnemyManager = %EnemyManager
+@export var manager: EnemyManager
 
 var bullet_scene: PackedScene = preload("res://Projectiles/Beer/beer.tscn")
 
 func _ready() -> void:
-	#timer.connect("timeout", _on_timer_timeout)
 	timer.start()
 	find_targets()
 	if !targets.is_empty():

@@ -2,21 +2,26 @@ extends Area2D
 class_name Beer
 
 var velocity: Vector2 = Vector2.ZERO
+var direction: Vector2 = Vector2.ZERO
 var shooter_node: Node2D = null
 
 @export var beer_splat_max: float = 80.0
 @export var beer_splat_min: float = 50.0
+@export var move_base_speed: int = 100
+@export var move_acceleration: float = 1.05
 
 var pool_scene: PackedScene = preload("res://Interactables/Pools/beer_pool.tscn")
 
 func _physics_process(delta: float) -> void:
+	velocity *= move_acceleration
 	position += velocity * delta
 
 func fire(start_pos: Vector2, movement: Vector2, shooter: Node2D):
 	shooter_node = shooter
 	rotation = movement.angle()
 	global_position = start_pos
-	velocity = movement
+	direction = movement.normalized()
+	velocity = direction * move_base_speed
 
 func spawn_pool() -> void:
 	var beer = pool_scene.instantiate()

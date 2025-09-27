@@ -19,7 +19,6 @@ z_index = -2
 z_index = -1
 
 [node name="EnemyManager" parent="." index="3" instance=ExtResource("3_tngpi")]
-unique_name_in_owner = true
 
 [node name="Patron" parent="EnemyManager" index="0" instance=ExtResource("4_kqypi")]
 position = Vector2(887, 984)
@@ -72,5 +71,6 @@ position = Vector2(1247, 621)
 position = Vector2(1341, 1272)
 zoom = Vector2(0.5, 0.5)
 
-[node name="Barman" parent="." index="7" instance=ExtResource("2_5k6n7")]
+[node name="Barman" parent="." index="7" node_paths=PackedStringArray("manager") instance=ExtResource("2_5k6n7")]
 position = Vector2(890, 624)
+manager = NodePath("../EnemyManager")
