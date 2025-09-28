@@ -9,7 +9,6 @@ signal player_death
 
 var is_stunned: bool = false
 var is_cleaning: bool = false
-@onready var timer: Timer = $Timer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var particle_player: CPUParticles2D = $CPUParticles2D
 
@@ -18,7 +17,6 @@ var _health: int = 5
 
 
 func _ready() -> void:
-	timer.connect("timeout", _on_timer_timeout)
 	animation_player.play("idle")
 
 func _physics_process(_delta: float) -> void:
@@ -53,18 +51,12 @@ func _input(event: InputEvent) -> void:
 		is_cleaning = false
 
 func hit():
-	# is_stunned = true
+	animation_player.play("RESET")
 	animation_player.play("hurt")
 	animation_player.queue("idle")
-	timer.start(hit_cooldown)
 	
 	_health -= 1
 	if _health < 1:
 		player_death.emit()
 	else:
 		player_hit.emit()
-
-
-#Signals
-func _on_timer_timeout():
-	is_stunned = false

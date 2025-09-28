@@ -21,6 +21,7 @@ height = 127.0
 
 [node name="Patron" type="CharacterBody2D" groups=["Hitable"]]
 script = ExtResource("1_ny15e")
+bullet_speed = 300
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(54, -16)

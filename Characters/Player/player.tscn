@@ -53,22 +53,6 @@ tracks/0/keys = {
 "values": [0.0, 0.6981317007977318, 0.0, 0.6981317007977318]
 }
 
-[sub_resource type="Animation" id="Animation_eovys"]
-resource_name = "idle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(2.0705302, 1.5157168, 1.5691682),
-"update": 0,
-"values": [0.12217304763960309, -0.12217304763960309, 0.12217304763960309]
-}
-
 [sub_resource type="Animation" id="Animation_xf5fp"]
 resource_name = "hurt"
 tracks/0/type = "value"
@@ -93,7 +77,23 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(2.0705302, 1.8660663, 2.0000002),
 "update": 0,
-"values": [0.12217304763960307, -0.12217304763960307, 0.12217305]
+"values": [0.12217304763960309, -0.12217304763960309, 0.12217305]
+}
+
+[sub_resource type="Animation" id="Animation_eovys"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(2.0705302, 1.5157168, 1.5691682),
+"update": 0,
+"values": [0.12217304763960309, -0.12217304763960309, 0.12217304763960309]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vb825"]
@@ -130,8 +130,6 @@ texture = ExtResource("2_eovys")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("CapsuleShape2D_eovys")
-
-[node name="Timer" type="Timer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
