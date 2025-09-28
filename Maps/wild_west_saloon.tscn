@@ -99,4 +99,5 @@ position = Vector2(890, 624)
 manager = NodePath("../EnemyManager")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="8"]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_kqypi")

@@ -15,20 +15,15 @@ var bullet_scene: PackedScene = preload("res://Projectiles/Beer/beer.tscn")
 
 func _ready() -> void:
 	timer.start()
-	find_targets()
+	manager.connect("targets_updated", _find_targets)
 	if !targets.is_empty():
 		timer.start(time_between_shots)
 	
-func find_targets():
+func _find_targets():
 	var patrons: Array = manager.patrons
 	for patron in patrons:
 		if patron is Patron:
 			targets.append(patron.global_position)
-			
-	if targets.is_empty():
-		timer.stop()
-	elif not timer.is_stopped():
-		timer.start(time_between_shots)
 			
 func shoot(target_pos: Vector2) -> void:
 	var dir: Vector2 = target_pos - position
@@ -47,7 +42,6 @@ func shoot(target_pos: Vector2) -> void:
 	get_tree().root.add_child(bullet)
 
 func _on_timer_timeout() -> void:
-	find_targets()
 	if len(targets) > 0:
 		shoot(targets.pick_random())
 	timer.start(time_between_shots)

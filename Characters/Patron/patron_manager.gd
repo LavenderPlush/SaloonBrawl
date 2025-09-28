@@ -1,6 +1,8 @@
 extends Node2D
 class_name EnemyManager
 
+signal targets_updated
+
 @export var spawn_time: int = 5
 @export var path_holder: Node2D
 @export var spawn_point: Node2D
@@ -28,6 +30,7 @@ func _load_paths():
 		paths.append(target_nodes.map(func (pos): return pos.global_position))
 
 func update_patron_targets():
+	emit_signal("targets_updated")
 	for i in range(len(patrons)):
 		var targets = patrons.map(func (p: Patron): return p.global_position)
 		targets.remove_at(i)
