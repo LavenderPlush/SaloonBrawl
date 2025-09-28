@@ -1,14 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://crj7p5vn5aya1"]
+[gd_scene load_steps=5 format=3 uid="uid://crj7p5vn5aya1"]
 
 [ext_resource type="Texture2D" uid="uid://chrq5rmlsyeib" path="res://Assets/saloon_asset_beer.png" id="1_gsk4h"]
 [ext_resource type="Script" uid="uid://cyhc4t1isl46p" path="res://Interactables/Pools/pool.gd" id="1_ksyha"]
 [ext_resource type="PackedScene" uid="uid://cb5dnqrlwef6q" path="res://Interactables/interactable.tscn" id="2_gsk4h"]
+[ext_resource type="Texture2D" uid="uid://u0qodk4b8q4e" path="res://Assets/saloon_asset_beer_small.png" id="4_rhq6d"]
 
-[node name="BeerPool" type="Sprite2D"]
-z_index = -1
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("1_gsk4h")
+[node name="BeerPool" type="Node2D"]
 script = ExtResource("1_ksyha")
 
-[node name="Interactable" parent="." instance=ExtResource("2_gsk4h")]
+[node name="Interactable" parent="." node_paths=PackedStringArray("big_sprite", "small_sprite") instance=ExtResource("2_gsk4h")]
 scale = Vector2(0.64, 0.64)
+big_sprite = NodePath("../Big")
+small_sprite = NodePath("../Small")
+
+[node name="Big" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("1_gsk4h")
+
+[node name="Small" type="Sprite2D" parent="."]
+z_index = -2
+texture = ExtResource("4_rhq6d")
