@@ -11,6 +11,10 @@ func _ready():
 	player.connect("player_hit", health_bar._on_player_hit)
 	player.connect("player_death", _on_player_death)
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("reload"):
+		get_tree().reload_current_scene()
+
 func game_over():
 	#TODO handle game overs
 	player.queue_free()
