@@ -13,6 +13,8 @@ var _magasine: int = 0
 var pathing_manager: PathingManager
 var navigation_agent: NavigationAgent2D
 
+var sprite_bandit: Texture2D = preload("res://Assets/saloon_NPC_bandit.png")
+
 @export_category("Properties")
 @export var movement_speed: int = 200
 @export var health: int = 5
@@ -35,6 +37,8 @@ var bomb_scene: PackedScene = preload("res://Projectiles/Bomb/bomb.tscn")
 @onready var particles: GPUParticles2D = $GPUParticles2D
 
 func _ready() -> void:
+	if randf() < 0.5:
+		$Sprite2D.texture = sprite_bandit
 	pathing_manager = $PathingManager
 	pathing_manager.path = path
 	navigation_agent = $NavigationAgent2D
