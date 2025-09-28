@@ -6,7 +6,6 @@
 
 [node name="Blood" type="Node2D"]
 z_index = -1
-scale = Vector2(0.453125, 0.453125)
 script = ExtResource("2_lq2r4")
 
 [node name="Interactable" parent="." instance=ExtResource("2_5xl8x")]

@@ -11,8 +11,15 @@ var is_interacting: bool = false
 
 @onready var cleaning_bar: TextureProgressBar = null
 
+@export var big_sprite: Sprite2D
+@export var small_sprite: Sprite2D
+
 func _ready():
 	var timer = $Timer
+	if big_sprite:
+		big_sprite.visible = true
+	if small_sprite:
+		small_sprite.visible = false
 	if timer:
 		timer.connect("timeout", _on_timer_timeout)
 	self.connect("body_entered", _on_body_entered)
@@ -26,7 +33,17 @@ func _process(_delta):
 			if cleaning_bar:
 				cleaning_bar.visible = true
 		if is_interacting and cleaning_bar:
-			cleaning_bar.value = progress + (duration - $Timer.time_left)
+			cleaning_bar.value = duration - $Timer.time_left
+			if (duration - $Timer.time_left) >= duration / 2:
+				if big_sprite:
+					big_sprite.visible = false
+				if small_sprite:
+					small_sprite.visible = true
+			else:
+				if big_sprite:
+					big_sprite.visible = true
+				if small_sprite:
+					small_sprite.visible = false
 	else:
 		if is_interacting:
 			is_interacting = false
