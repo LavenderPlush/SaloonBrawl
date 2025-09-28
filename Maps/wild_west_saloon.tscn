@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://crj7p5vn5aya1" path="res://Interactables/Pools/beer_pool.tscn" id="6_5k6n7"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kqypi"]
-vertices = PackedVector2Array(2498.1563, 537.90625, 2505.8125, 761.75, 1887.7734, 732.75, 1397.4531, 518.0781, 1353.4609, 907.02344, 1902.2109, 1063.8984, 288.70313, 1257.9375, 267.29688, 901.02344, 1187.2031, 1246.9375, 2419.0234, 2280, 201.10938, 2281.9922, 205.89063, 2071.9375, 922.0469, 2063.9375, 2419.9688, 2057.961, 1774.0313, 2052.961, 283.90625, 1753.0703, 280.09375, 1544, 1175.8125, 1544, 918.9531, 1763.0781, 2391.8438, 1073.8906, 2371.1406, 1740.0078, 1771.9688, 1742.0234)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(6, 7, 4, 8), PackedInt32Array(9, 10, 11, 12, 13), PackedInt32Array(14, 13, 12), PackedInt32Array(15, 16, 17, 18), PackedInt32Array(5, 19, 20, 21, 17), PackedInt32Array(14, 12, 18, 17, 21), PackedInt32Array(4, 5, 17, 8)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(262, 896, 1349, 902, 1393, 513, 2503, 533, 2511, 767, 1893, 738, 1907, 1059, 2397, 1069, 2376, 1745, 1777, 1747, 1779, 2048, 2425, 2053, 2424, 2285, 196, 2287, 201, 2067, 917, 2059, 914, 1768, 279, 1758, 275, 1539, 1171, 1539, 1182, 1252, 284, 1263)])
-agent_radius = 5.0
+vertices = PackedVector2Array(1233.9766, 1201.3594, 331.04688, 1212.4063, 315.10156, 946.28906, 1393.6406, 952.25, 1856.5234, 1107.9766, 2454.6484, 582.1328, 2459.2188, 715.8594, 1860.5, 702.9219, 1437.5625, 563.7969, 2374.211, 2235.039, 247.14844, 2236.9531, 249.89063, 2116.4531, 967.5078, 2108.4375, 2374.7813, 2102.6094, 1729.3281, 2097.6172, 328.10156, 1708.7734, 325.92188, 1589, 1219.1172, 1589, 963.5, 1718.7734, 2345.4531, 1117.9531, 2327.5234, 1695.1563, 1726.6719, 1697.1719)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(3, 8, 7, 4), PackedInt32Array(9, 10, 11, 12, 13), PackedInt32Array(14, 13, 12), PackedInt32Array(15, 16, 17, 18), PackedInt32Array(4, 19, 20, 21, 17, 0), PackedInt32Array(14, 12, 18, 17, 21)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(262, 896, 1349, 902, 1393, 513, 2503, 533, 2511, 767, 1910, 754, 1907, 1059, 2397, 1069, 2376, 1745, 1777, 1747, 1779, 2048, 2425, 2053, 2424, 2285, 196, 2287, 201, 2067, 917, 2059, 914, 1768, 279, 1758, 275, 1539, 1171, 1539, 1182, 1252, 284, 1263)])
+agent_radius = 50.0
 
 [node name="Wild West Saloon" instance=ExtResource("1_cm30e")]
 
@@ -99,5 +99,4 @@ position = Vector2(890, 624)
 manager = NodePath("../EnemyManager")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="8"]
-visible = false
 navigation_polygon = SubResource("NavigationPolygon_kqypi")

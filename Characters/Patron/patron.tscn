@@ -42,4 +42,5 @@ shape = SubResource("CapsuleShape2D_0xwc4")
 [node name="PathingManager" parent="." instance=ExtResource("3_g8k0r")]
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+target_desired_distance = 20.0
 path_max_distance = 20.0
