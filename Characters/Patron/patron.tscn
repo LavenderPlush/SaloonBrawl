@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://btq4g3h0fm8dx"]
+[gd_scene load_steps=6 format=3 uid="uid://btq4g3h0fm8dx"]
 
 [ext_resource type="Script" uid="uid://bxp01ke813yri" path="res://Characters/Patron/patron.gd" id="1_ny15e"]
 [ext_resource type="Texture2D" uid="uid://dcor01tamrbx2" path="res://Assets/saloon_NPC_outlaw.png" id="2_ny15e"]
+[ext_resource type="PackedScene" uid="uid://b2jsuna70xs0e" path="res://Characters/pathing_manager.tscn" id="3_g8k0r"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ny15e"]
 particle_flag_disable_z = true
@@ -37,3 +38,8 @@ position = Vector2(-0.5, -0.5)
 shape = SubResource("CapsuleShape2D_0xwc4")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="PathingManager" parent="." instance=ExtResource("3_g8k0r")]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_max_distance = 20.0

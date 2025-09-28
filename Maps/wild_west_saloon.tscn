@@ -3,9 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://cggmu20aob1uq" path="res://Maps/Wild West Saloon.tmx" id="1_cm30e"]
 [ext_resource type="PackedScene" uid="uid://ds4sukpftjhcj" path="res://Characters/Barman/barman.tscn" id="2_5k6n7"]
 [ext_resource type="PackedScene" uid="uid://dhyyi853mkcb3" path="res://Characters/Patron/patron_manager.tscn" id="3_tngpi"]
-[ext_resource type="PackedScene" uid="uid://btq4g3h0fm8dx" path="res://Characters/Patron/patron.tscn" id="4_kqypi"]
 [ext_resource type="PackedScene" uid="uid://cokg6av2uax0d" path="res://GameManager/game_manager.tscn" id="5_kqypi"]
 [ext_resource type="PackedScene" uid="uid://crj7p5vn5aya1" path="res://Interactables/Pools/beer_pool.tscn" id="6_5k6n7"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_kqypi"]
+vertices = PackedVector2Array(2498.1563, 537.90625, 2505.8125, 761.75, 1887.7734, 732.75, 1397.4531, 518.0781, 1353.4609, 907.02344, 1902.2109, 1063.8984, 288.70313, 1257.9375, 267.29688, 901.02344, 1187.2031, 1246.9375, 2419.0234, 2280, 201.10938, 2281.9922, 205.89063, 2071.9375, 922.0469, 2063.9375, 2419.9688, 2057.961, 1774.0313, 2052.961, 283.90625, 1753.0703, 280.09375, 1544, 1175.8125, 1544, 918.9531, 1763.0781, 2391.8438, 1073.8906, 2371.1406, 1740.0078, 1771.9688, 1742.0234)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(6, 7, 4, 8), PackedInt32Array(9, 10, 11, 12, 13), PackedInt32Array(14, 13, 12), PackedInt32Array(15, 16, 17, 18), PackedInt32Array(5, 19, 20, 21, 17), PackedInt32Array(14, 12, 18, 17, 21), PackedInt32Array(4, 5, 17, 8)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(262, 896, 1349, 902, 1393, 513, 2503, 533, 2511, 767, 1893, 738, 1907, 1059, 2397, 1069, 2376, 1745, 1777, 1747, 1779, 2048, 2425, 2053, 2424, 2285, 196, 2287, 201, 2067, 917, 2059, 914, 1768, 279, 1758, 275, 1539, 1171, 1539, 1182, 1252, 284, 1263)])
+agent_radius = 5.0
 
 [node name="Wild West Saloon" instance=ExtResource("1_cm30e")]
 
@@ -18,28 +23,46 @@ z_index = -2
 [node name="Furniture" parent="." index="2"]
 z_index = -1
 
-[node name="EnemyManager" parent="." index="3" instance=ExtResource("3_tngpi")]
+[node name="EnemyManager" parent="." index="3" node_paths=PackedStringArray("path_holder", "spawn_point") instance=ExtResource("3_tngpi")]
+path_holder = NodePath("PathHolder")
+spawn_point = NodePath("SpawnPoint")
 
-[node name="Patron" parent="EnemyManager" index="0" instance=ExtResource("4_kqypi")]
-position = Vector2(887, 984)
+[node name="PathHolder" type="Node2D" parent="EnemyManager" index="2"]
 
-[node name="Patron2" parent="EnemyManager" index="1" instance=ExtResource("4_kqypi")]
-position = Vector2(1246, 1934)
+[node name="1" type="Node" parent="EnemyManager/PathHolder" index="0"]
 
-[node name="Patron3" parent="EnemyManager" index="2" instance=ExtResource("4_kqypi")]
-position = Vector2(597, 1700)
+[node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/1" index="0"]
+position = Vector2(957, 1065)
 
-[node name="Patron4" parent="EnemyManager" index="3" instance=ExtResource("4_kqypi")]
-position = Vector2(2113, 1277)
+[node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/1" index="1"]
+position = Vector2(461, 1055)
 
-[node name="Patron5" parent="EnemyManager" index="4" instance=ExtResource("4_kqypi")]
-position = Vector2(421, 1312)
+[node name="2" type="Node" parent="EnemyManager/PathHolder" index="1"]
 
-[node name="Patron6" parent="EnemyManager" index="5" instance=ExtResource("4_kqypi")]
-position = Vector2(1719, 829)
+[node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/2" index="0"]
+position = Vector2(2169, 1218)
 
-[node name="Patron7" parent="EnemyManager" index="6" instance=ExtResource("4_kqypi")]
-position = Vector2(2013, 1640)
+[node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/2" index="1"]
+position = Vector2(2157, 1618)
+
+[node name="3" type="Node" parent="EnemyManager/PathHolder" index="2"]
+
+[node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/3" index="0"]
+position = Vector2(445, 1663)
+
+[node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/3" index="1"]
+position = Vector2(900, 1671)
+
+[node name="4" type="Node" parent="EnemyManager/PathHolder" index="3"]
+
+[node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/4" index="0"]
+position = Vector2(1772, 642)
+
+[node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/4" index="1"]
+position = Vector2(2344, 632)
+
+[node name="SpawnPoint" type="Node2D" parent="EnemyManager" index="3"]
+position = Vector2(1401, 2196)
 
 [node name="BeerPools" type="Node" parent="." index="4"]
 
@@ -74,3 +97,7 @@ zoom = Vector2(0.5, 0.5)
 [node name="Barman" parent="." index="7" node_paths=PackedStringArray("manager") instance=ExtResource("2_5k6n7")]
 position = Vector2(890, 624)
 manager = NodePath("../EnemyManager")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="8"]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_kqypi")
