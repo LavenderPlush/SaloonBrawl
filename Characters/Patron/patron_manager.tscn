@@ -4,3 +4,7 @@
 
 [node name="EnemyManager" type="Node2D"]
 script = ExtResource("1_d3rpj")
+
+[node name="EnemyHolder" type="Node2D" parent="."]
+
+[node name="SpawnTimer" type="Timer" parent="."]

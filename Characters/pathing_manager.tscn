@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2jsuna70xs0e"]
+
+[ext_resource type="Script" uid="uid://dtchr7mbj6lgs" path="res://Characters/pathing_manager.gd" id="1_rker2"]
+
+[node name="PathingManager" type="Node2D"]
+script = ExtResource("1_rker2")
