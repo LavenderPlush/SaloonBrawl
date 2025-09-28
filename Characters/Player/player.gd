@@ -53,7 +53,9 @@ func _input(event: InputEvent) -> void:
 		is_cleaning = false
 
 func hit():
-	is_stunned = true
+	# is_stunned = true
+	animation_player.play("hurt")
+	animation_player.queue("idle")
 	timer.start(hit_cooldown)
 	
 	_health -= 1
