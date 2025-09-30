@@ -40,6 +40,7 @@ func _get_input_direction() -> Vector2:
 	
 	return direction.normalized()
 
+var move_keys_down = 0
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		animation_player.play("clean")
@@ -49,6 +50,14 @@ func _input(event: InputEvent) -> void:
 		animation_player.play("idle")
 		particle_player.emitting = false
 		is_cleaning = false
+	if event.is_action_pressed("movement_keys"):
+		move_keys_down += 1
+		if not is_cleaning:
+			animation_player.play("running")
+	if event.is_action_released("movement_keys"):
+		move_keys_down -= 1
+		if not is_cleaning && move_keys_down == 0:
+			animation_player.play("idle")
 
 func hit():
 	animation_player.play("RESET")

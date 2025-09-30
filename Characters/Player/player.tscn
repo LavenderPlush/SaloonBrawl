@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://5jxd2d3xp2u"]
+[gd_scene load_steps=13 format=3 uid="uid://5jxd2d3xp2u"]
 
 [ext_resource type="Script" uid="uid://cden4n15eniqx" path="res://Characters/Player/player.gd" id="1_eovys"]
 [ext_resource type="Texture2D" uid="uid://bfhk1ch2ueyd5" path="res://Assets/saloon_player.png" id="2_eovys"]
@@ -81,7 +81,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_eovys"]
-resource_name = "idle"
+resource_name = "running"
+length = 0.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -90,10 +91,38 @@ tracks/0/path = NodePath("Sprite2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
+"times": PackedFloat32Array(0, 0.23333335, 0.5),
 "transitions": PackedFloat32Array(2.0705302, 1.5157168, 1.5691682),
 "update": 0,
 "values": [0.12217304763960309, -0.12217304763960309, 0.12217304763960309]
+}
+
+[sub_resource type="Animation" id="Animation_osktb"]
+resource_name = "idle"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1.8660663),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vb825"]
@@ -101,7 +130,8 @@ _data = {
 &"RESET": SubResource("Animation_vb825"),
 &"clean": SubResource("Animation_65n15"),
 &"hurt": SubResource("Animation_xf5fp"),
-&"idle": SubResource("Animation_eovys")
+&"idle": SubResource("Animation_osktb"),
+&"running": SubResource("Animation_eovys")
 }
 
 [node name="Player" type="CharacterBody2D" groups=["Hitable", "Player"]]
