@@ -25,32 +25,35 @@ func _ready():
 	self.connect("body_entered", _on_body_entered)
 	self.connect("body_exited", _on_body_exited)
 
-func _process(_delta):
-	if in_range and Input.is_action_pressed("interact"):
-		if not is_interacting:
-			is_interacting = true
-			$Timer.start(duration - progress)
-			if cleaning_bar:
-				cleaning_bar.visible = true
-		if is_interacting and cleaning_bar:
-			cleaning_bar.value = duration - $Timer.time_left
-			if (duration - $Timer.time_left) >= duration / 2:
-				if big_sprite:
-					big_sprite.visible = false
-				if small_sprite:
-					small_sprite.visible = true
-			else:
-				if big_sprite:
-					big_sprite.visible = true
-				if small_sprite:
-					small_sprite.visible = false
-	else:
-		if is_interacting:
-			is_interacting = false
-			progress = duration - $Timer.time_left
-			$Timer.stop()
-			if cleaning_bar:
-				cleaning_bar.visible = false
+func _process(_delta: float) -> void:
+	if is_interacting and cleaning_bar:
+		cleaning_bar.value = duration - $Timer.time_left
+		if (duration - $Timer.time_left) >= duration / 2:
+			if big_sprite:
+				big_sprite.visible = false
+			if small_sprite:
+				small_sprite.visible = true
+		else:
+			if big_sprite:
+				big_sprite.visible = true
+			if small_sprite:
+				small_sprite.visible = false
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("interact") and in_range:
+		is_interacting = true
+		$Timer.start(duration - progress)
+		if cleaning_bar:
+			cleaning_bar.visible = true
+
+	if event.is_action_released("interact") or event.is_action_pressed("movement_keys"):
+		if not in_range:
+			return
+		is_interacting = false
+		progress = duration - $Timer.time_left
+		$Timer.stop()
+		if cleaning_bar:
+			cleaning_bar.visible = false
 	
 func _on_body_entered(object):
 	if object.is_in_group("Player"):

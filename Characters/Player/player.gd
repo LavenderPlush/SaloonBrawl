@@ -57,8 +57,9 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("movement_keys"):
 		move_keys_down += 1
 		is_running = true
-		if not is_cleaning:
-			animation_player.play("running")
+		particle_player.emitting = false
+		is_cleaning = false
+		animation_player.play("running")
 	if event.is_action_released("movement_keys"):
 		move_keys_down -= 1
 		if not is_cleaning && move_keys_down == 0:
