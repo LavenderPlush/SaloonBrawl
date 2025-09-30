@@ -8,6 +8,7 @@ radius = 33.0
 height = 124.0
 
 [node name="Barman" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_g7hkh")
 time_between_shots = 8.0
 spray_angle_degrees = 34.0

@@ -135,6 +135,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" groups=["Hitable", "Player"]]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_eovys")
 move_speed = 550
 
