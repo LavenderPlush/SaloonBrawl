@@ -21,7 +21,14 @@ height = 127.0
 
 [node name="Patron" type="CharacterBody2D" groups=["Hitable"]]
 script = ExtResource("1_ny15e")
-bullet_speed = 300
+movement_speed = 550
+health = 20
+chance_to_move = 0.2
+time_between_shots = 0.7
+time_reload = 2.5
+bullet_speed = 620
+spray_angle_degrees = 34.0
+bomb_chance = 0.08
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(54, -16)

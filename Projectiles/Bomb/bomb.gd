@@ -2,7 +2,7 @@ extends Area2D
 class_name Bomb
 
 @export var move_base_speed: int = 100
-@export var move_acceleration: float = 1.05
+@export var move_deceleration: float = 2.0
 var _direction: Vector2 = Vector2.ZERO
 var _velocity: Vector2 = Vector2.ZERO
 
@@ -23,7 +23,7 @@ func _ready() -> void:
 	timer.start(fuse_time)
 
 func _physics_process(delta: float) -> void:
-	_velocity *= move_acceleration
+	_velocity -= _velocity.normalized() * move_deceleration
 	position += _velocity * delta
 
 func fire(start_pos: Vector2, movement: Vector2):
