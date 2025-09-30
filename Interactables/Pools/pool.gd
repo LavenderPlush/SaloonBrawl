@@ -1,7 +1,22 @@
 extends Node2D
 
+@onready var interactable: Interactable = $Interactable
+
 func _ready() -> void:
-	$Interactable.connect("done_interacting", _on_cleaned)
-	
-func _on_cleaned():
+	visible = false
+	interactable.connect("done_interacting", _on_cleaned)
+	interactable.connect("area_entered", _on_area_entered)
+	await get_tree().create_timer(0.2).timeout
+	visible = true
+
+func _on_area_entered(area: Area2D):
+	if area.get_parent().is_in_group("Mess"):
+		if area.get_rid() < interactable.get_rid():
+			_remove_mess()
+
+func _remove_mess():
 	queue_free()
+
+# Signals
+func _on_cleaned():
+	_remove_mess()
