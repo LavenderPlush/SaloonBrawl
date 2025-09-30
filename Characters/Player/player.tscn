@@ -106,6 +106,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" groups=["Hitable", "Player"]]
 script = ExtResource("1_eovys")
+move_speed = 550
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(-46, 46)
