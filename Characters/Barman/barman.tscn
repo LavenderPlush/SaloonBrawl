@@ -9,6 +9,8 @@ height = 124.0
 
 [node name="Barman" type="CharacterBody2D"]
 script = ExtResource("1_g7hkh")
+time_between_shots = 8.0
+spray_angle_degrees = 34.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_koags")
