@@ -70,39 +70,20 @@ position = Vector2(2803, 638)
 [node name="SpawnPoint" type="Node2D" parent="EnemyManager" index="3"]
 position = Vector2(1401, 2196)
 
-[node name="BeerPools" type="Node" parent="." index="4"]
-
-[node name="BeerPool" parent="BeerPools" index="0" instance=ExtResource("6_5k6n7")]
-position = Vector2(1319, 975)
-
-[node name="BeerPool2" parent="BeerPools" index="1" instance=ExtResource("6_5k6n7")]
-position = Vector2(905, 1222)
-
-[node name="BeerPool3" parent="BeerPools" index="2" instance=ExtResource("6_5k6n7")]
-position = Vector2(1851, 1723)
-
-[node name="BeerPool4" parent="BeerPools" index="3" instance=ExtResource("6_5k6n7")]
-position = Vector2(973, 1978.0001)
-
-[node name="BeerPool5" parent="BeerPools" index="4" instance=ExtResource("6_5k6n7")]
-position = Vector2(1946, 1043)
-
-[node name="BeerPool6" parent="BeerPools" index="5" instance=ExtResource("6_5k6n7")]
-position = Vector2(1479, 1374)
-
-[node name="BeerPool7" parent="BeerPools" index="6" instance=ExtResource("6_5k6n7")]
-position = Vector2(1122, 1674)
-
-[node name="GameManager" parent="." index="5" instance=ExtResource("5_kqypi")]
+[node name="GameManager" parent="." index="4" instance=ExtResource("5_kqypi")]
 position = Vector2(2861, 1031)
 
-[node name="Camera2D" type="Camera2D" parent="." index="6"]
+[node name="Camera2D" type="Camera2D" parent="." index="5"]
 position = Vector2(1341, 1272)
 zoom = Vector2(0.5, 0.5)
 
-[node name="Barman" parent="." index="7" node_paths=PackedStringArray("manager") instance=ExtResource("2_5k6n7")]
+[node name="Barman" parent="." index="6" node_paths=PackedStringArray("manager") instance=ExtResource("2_5k6n7")]
 position = Vector2(890, 624)
 manager = NodePath("../EnemyManager")
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="8"]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="7"]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_kqypi")
+
+[node name="BeerPool" parent="." index="8" instance=ExtResource("6_5k6n7")]
+position = Vector2(1319, 975)
