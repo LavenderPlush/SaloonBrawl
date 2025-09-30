@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cb5dnqrlwef6q" path="res://Interactables/interactable.tscn" id="2_gsk4h"]
 [ext_resource type="Texture2D" uid="uid://u0qodk4b8q4e" path="res://Assets/saloon_asset_beer_small.png" id="4_rhq6d"]
 
-[node name="BeerPool" type="Node2D"]
+[node name="BeerPool" type="Node2D" groups=["Mess"]]
 script = ExtResource("1_ksyha")
 
 [node name="Interactable" parent="." node_paths=PackedStringArray("big_sprite", "small_sprite") instance=ExtResource("2_gsk4h")]

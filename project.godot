@@ -38,6 +38,7 @@ enabled=PackedStringArray("res://addons/YATI/plugin.cfg")
 
 Player=""
 Hitable=""
+Mess=""
 
 [input]
 

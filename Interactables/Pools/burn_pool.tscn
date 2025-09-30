@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dlk7icpqrcw7f" path="res://Assets/saloon_asset_burnt.png" id="2_vbcj0"]
 [ext_resource type="Texture2D" uid="uid://cex2brg367di1" path="res://Assets/saloon_asset_burnt_small.png" id="3_tm6ek"]
 
-[node name="BurnPool" type="Node2D"]
+[node name="BurnPool" type="Node2D" groups=["Mess"]]
 
 [node name="Interactable" parent="." node_paths=PackedStringArray("big_sprite", "small_sprite") instance=ExtResource("1_tpiqg")]
 big_sprite = NodePath("../Big")

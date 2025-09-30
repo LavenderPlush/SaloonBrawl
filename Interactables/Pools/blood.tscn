@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cyhc4t1isl46p" path="res://Interactables/Pools/pool.gd" id="2_lq2r4"]
 [ext_resource type="Texture2D" uid="uid://cc223l3owqcn7" path="res://Assets/saloon_asset_blood_small.png" id="4_jcsgl"]
 
-[node name="Blood" type="Node2D"]
+[node name="Blood" type="Node2D" groups=["Mess"]]
 script = ExtResource("2_lq2r4")
 
 [node name="Interactable" parent="." node_paths=PackedStringArray("big_sprite", "small_sprite") instance=ExtResource("2_5xl8x")]
