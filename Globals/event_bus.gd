@@ -3,4 +3,4 @@
 extends Node
 
 @warning_ignore("unused_signal")
-signal add_money(amount: float)
+signal add_money(amount: int)

@@ -4,7 +4,7 @@ class_name interactable
 signal done_interacting
 
 @export var duration: float = 2
-@export var pay: float = 0.1
+@export var pay: int = 1
 var progress: float = 0
 var in_range: bool = false
 var is_interacting: bool = false
