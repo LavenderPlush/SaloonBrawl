@@ -4,7 +4,7 @@ extends Node2D
 @onready var money_ui: Label = $UI/Money
 @onready var player: Player = $Player
 
-var player_money: float = 0.0
+var player_money: int = 0
 
 func _ready():
 	EventBus.connect("add_money", _on_get_money)
@@ -23,6 +23,6 @@ func game_over():
 func _on_player_death():
 	game_over()
 	
-func _on_get_money(amount: float):
+func _on_get_money(amount: int):
 	player_money += amount
-	money_ui.text = '$' + str(player_money)
+	money_ui.text = '$' + str(float(player_money)/100)
