@@ -4,19 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://be76qwnb7j5dm" path="res://Assets/saloon_asset_bullet.png" id="2_t4uhm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cys0c"]
-radius = 5.0
+radius = 8.0
 height = 20.0
 
 [node name="Bullet" type="Area2D"]
 script = ExtResource("1_t4uhm")
-blood_splat_max = 167.0
-blood_splat_min = 80.0
-blood_chance = 0.08
+blood_splat_max = 350.0
+blood_splat_min = 200.0
+blood_chance = 0.12
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 3.1415927
 texture = ExtResource("2_t4uhm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_cys0c")

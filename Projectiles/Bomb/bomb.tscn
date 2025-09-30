@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dlrm7awfs8pma" path="res://Assets/saloon_asset_fire.png" id="3_maj5q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sh5ep"]
-radius = 27.166155
+radius = 23.0
 
 [sub_resource type="Animation" id="Animation_akvds"]
 length = 0.001
@@ -103,6 +103,7 @@ rotation = -1.5707964
 texture = ExtResource("2_maj5q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -3)
 shape = SubResource("CircleShape2D_sh5ep")
 
 [node name="Timer" type="Timer" parent="."]

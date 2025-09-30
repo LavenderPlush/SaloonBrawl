@@ -23,10 +23,10 @@ height = 127.0
 script = ExtResource("1_ny15e")
 movement_speed = 550
 health = 20
-chance_to_move = 0.2
+chance_to_move = 0.15
 time_between_shots = 0.7
-time_reload = 2.5
-bullet_speed = 620
+time_reload = 2.4
+bullet_speed = 600
 spray_angle_degrees = 34.0
 bomb_chance = 0.08
 
@@ -39,10 +39,12 @@ one_shot = true
 process_material = SubResource("ParticleProcessMaterial_ny15e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_ny15e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -0.5)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("CapsuleShape2D_0xwc4")
 
 [node name="Timer" type="Timer" parent="."]
