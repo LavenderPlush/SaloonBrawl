@@ -9,6 +9,7 @@ signal player_death
 
 var is_stunned: bool = false
 var is_cleaning: bool = false
+var is_running: bool = false
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var particle_player: CPUParticles2D = $CPUParticles2D
 
@@ -47,11 +48,15 @@ func _input(event: InputEvent) -> void:
 		particle_player.emitting = true
 		is_cleaning = true
 	if event.is_action_released("interact"):
-		animation_player.play("idle")
+		if not is_running:
+			animation_player.play("idle")
+		else:
+			animation_player.play("running")
 		particle_player.emitting = false
 		is_cleaning = false
 	if event.is_action_pressed("movement_keys"):
 		move_keys_down += 1
+		is_running = true
 		if not is_cleaning:
 			animation_player.play("running")
 	if event.is_action_released("movement_keys"):

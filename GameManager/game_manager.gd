@@ -25,4 +25,4 @@ func _on_player_death():
 	
 func _on_get_money(amount: int):
 	player_money += amount
-	money_ui.text = '$' + str(float(player_money)/100)
+	money_ui.text = '$' + str(float(player_money)/10)
