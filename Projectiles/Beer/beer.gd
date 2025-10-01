@@ -39,17 +39,17 @@ func _on_body_entered(body: Node2D) -> void:
 		
 	if body.is_in_group("Player"):
 		body.stun()
-		queue_free()
 		call_deferred("spawn_pool")
+		queue_free()
 		
 	if body.is_in_group("Hitable") && !body.is_in_group("Player"):
 		body.hit()
-		queue_free()
 		call_deferred("spawn_pool")
+		queue_free()
 		
 	if body.name == "Tiles":
 		queue_free()
 		
 func _on_timer_timeout():
-	queue_free()
 	call_deferred("spawn_pool")
+	queue_free()
