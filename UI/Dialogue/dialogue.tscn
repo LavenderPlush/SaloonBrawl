@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://qiyov5edrmj5"]
+[gd_scene load_steps=5 format=3 uid="uid://qiyov5edrmj5"]
 
 [ext_resource type="Script" uid="uid://bubkutp4hupm4" path="res://UI/Dialogue/dialogue.gd" id="1_hft2i"]
 [ext_resource type="Texture2D" uid="uid://cxhtgmopct6no" path="res://Assets/saloon_bartender_face_calm.png" id="2_xgrt4"]
+[ext_resource type="Texture2D" uid="uid://c0w56jh0c1vsg" path="res://Assets/saloon_text_box.png" id="3_hix8u"]
+[ext_resource type="FontFile" uid="uid://do8thveitp5uv" path="res://Assets/Go2OldWestern-Regular.ttf" id="4_o83p3"]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -13,8 +15,27 @@ grow_vertical = 2
 script = ExtResource("1_hft2i")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 0.954
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_xgrt4")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="SpeechBubble" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-397.99997, -44.999996)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_hix8u")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -581.0
+offset_top = -83.0
+offset_right = -200.0
+offset_bottom = -11.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_o83p3")
+theme_override_font_sizes/font_size = 31
+autowrap_mode = 3

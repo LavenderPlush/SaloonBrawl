@@ -74,8 +74,10 @@ func hit():
 	
 	_health -= 1
 	if _health < 1:
+		EventBus.emit_signal("player_dead")
 		player_death.emit()
 	else:
+		EventBus.emit_signal("player_hit", _health)
 		player_hit.emit()
 
 func stun():

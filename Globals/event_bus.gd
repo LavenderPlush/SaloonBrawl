@@ -14,3 +14,5 @@ signal remove_mess()
 signal game_over()
 # Player dies
 signal player_dead()
+# Player hit
+signal player_hit(hp: int)
