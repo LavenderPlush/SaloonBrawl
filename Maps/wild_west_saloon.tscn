@@ -35,10 +35,19 @@ spawn_point = NodePath("SpawnPoint")
 [node name="1" type="Node" parent="EnemyManager/PathHolder" index="0"]
 
 [node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/1" index="0"]
-position = Vector2(957, 1065)
+position = Vector2(72, 1083)
 
 [node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/1" index="1"]
-position = Vector2(461, 1055)
+position = Vector2(256, 1368)
+
+[node name="Node2D3" type="Node2D" parent="EnemyManager/PathHolder/1" index="2"]
+position = Vector2(-202, 771)
+
+[node name="Node2D4" type="Node2D" parent="EnemyManager/PathHolder/1" index="3"]
+position = Vector2(-136, 1405)
+
+[node name="Node2D5" type="Node2D" parent="EnemyManager/PathHolder/1" index="4"]
+position = Vector2(255, 761)
 
 [node name="2" type="Node" parent="EnemyManager/PathHolder" index="1"]
 

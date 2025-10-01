@@ -24,7 +24,6 @@ scale = Vector2(1.5, 1.5)
 script = ExtResource("1_ny15e")
 movement_speed = 550
 health = 20
-chance_to_move = 0.15
 time_between_shots = 0.6
 time_reload = 2.0
 bullet_speed = 620
@@ -46,10 +45,12 @@ texture = ExtResource("2_ny15e")
 position = Vector2(-0.5, -0.5)
 shape = SubResource("CapsuleShape2D_0xwc4")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="ShootingTimer" type="Timer" parent="."]
 
 [node name="PathingManager" parent="." instance=ExtResource("3_g8k0r")]
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 target_desired_distance = 20.0
 path_max_distance = 20.0
+
+[node name="MovingTimer" type="Timer" parent="."]
