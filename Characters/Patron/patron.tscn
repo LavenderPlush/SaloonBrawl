@@ -20,6 +20,7 @@ radius = 44.5
 height = 127.0
 
 [node name="Patron" type="CharacterBody2D" groups=["Hitable"]]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_ny15e")
 movement_speed = 550
 health = 20

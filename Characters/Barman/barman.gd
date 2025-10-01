@@ -33,9 +33,9 @@ func shoot(target_pos: Vector2) -> void:
 	var start_pos: Vector2 = global_position + dir.normalized() * 100
 	
 	if abs(dir.angle()) < Vector2.DOWN.angle():
-		scale.x = 1
+		scale.x = 1.5
 	else:
-		scale.x = -1
+		scale.x = -1.5
 		
 	var bullet = bullet_scene.instantiate()
 	bullet.fire(start_pos, movement, self)
