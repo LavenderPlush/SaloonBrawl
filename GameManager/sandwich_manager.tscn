@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw81m81xepsal"]
+
+[ext_resource type="Script" uid="uid://cnt7kk2bkwu4t" path="res://GameManager/sandwich_manager.gd" id="1_d1ux1"]
+
+[node name="SandwichManager" type="Node2D"]
+script = ExtResource("1_d1ux1")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

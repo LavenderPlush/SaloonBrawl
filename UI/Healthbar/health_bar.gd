@@ -14,3 +14,7 @@ func _ready():
 func _on_player_hit():
 	_health -= 1
 	_hearts[_health].remove_health()
+
+func _on_player_heal():
+	_health += 2
+	_hearts[_health].add_health()

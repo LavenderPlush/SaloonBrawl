@@ -3,6 +3,7 @@ class_name Player
 
 signal player_hit
 signal player_death
+signal player_heal
 
 @export var move_speed: int = 500
 @export var hit_cooldown: float = 1.0
@@ -75,3 +76,9 @@ func hit():
 		player_death.emit()
 	else:
 		player_hit.emit()
+
+func heal(ammount: int) -> void:
+	_health += ammount
+	if(_health > 5):
+		_health = 5
+	player_heal.emit()
