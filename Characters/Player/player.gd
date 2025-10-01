@@ -5,13 +5,14 @@ signal player_hit
 signal player_death
 
 @export var move_speed: int = 500
-@export var hit_cooldown: float = 1.0
+@export var stun_duration: float = 1.0
 
 var is_stunned: bool = false
 var is_cleaning: bool = false
 var is_running: bool = false
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var particle_player: CPUParticles2D = $CPUParticles2D
+@onready var timer: Timer = $Timer
 
 #NOTE hardcoded health: if changed also update the health bar
 var _health: int = 5
@@ -19,6 +20,7 @@ var _health: int = 5
 
 func _ready() -> void:
 	animation_player.play("idle")
+	timer.connect("timeout", _on_timer_timeout)
 
 func _physics_process(_delta: float) -> void:
 	if not is_stunned and not is_cleaning:
@@ -72,6 +74,17 @@ func hit():
 	
 	_health -= 1
 	if _health < 1:
+		EventBus.emit_signal("player_dead")
 		player_death.emit()
 	else:
+		EventBus.emit_signal("player_hit", _health)
 		player_hit.emit()
+
+func stun():
+	is_stunned = true
+	timer.start(stun_duration)
+	animation_player.play("RESET")
+	animation_player.queue("idle")
+
+func _on_timer_timeout():
+	is_stunned = false
