@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://du41rt0ip1vcv" path="res://UI/ui.tscn" id="4_jij60"]
 
 [node name="GameManager" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_70yv6")
 
 [node name="Player" parent="." instance=ExtResource("2_o2178")]

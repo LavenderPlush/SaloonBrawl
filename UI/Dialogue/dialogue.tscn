@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://qiyov5edrmj5"]
+[gd_scene load_steps=3 format=3 uid="uid://qiyov5edrmj5"]
 
 [ext_resource type="Script" uid="uid://bubkutp4hupm4" path="res://UI/Dialogue/dialogue.gd" id="1_hft2i"]
+[ext_resource type="Texture2D" uid="uid://cxhtgmopct6no" path="res://Assets/saloon_bartender_face_calm.png" id="2_xgrt4"]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -12,3 +13,8 @@ grow_vertical = 2
 script = ExtResource("1_hft2i")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xgrt4")
+
+[node name="Timer" type="Timer" parent="."]
