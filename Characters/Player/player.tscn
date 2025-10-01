@@ -179,3 +179,5 @@ step = 0.1
 texture_under = ExtResource("3_xf5fp")
 texture_over = ExtResource("4_osktb")
 texture_progress = ExtResource("5_7vev3")
+
+[node name="Timer" type="Timer" parent="."]
