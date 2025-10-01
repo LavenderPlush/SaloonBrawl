@@ -46,7 +46,7 @@ func _on_body_entered(body: Node2D) -> void:
 		call_deferred("spawn_pool")
 		queue_free()
 		
-	if body.name == "Tiles":
+	if body.is_in_group("Walls"):
 		queue_free()
 		
 func _on_timer_timeout():
