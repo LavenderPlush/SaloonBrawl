@@ -28,8 +28,7 @@ func fire(start_pos: Vector2, movement: Vector2, shooter: Node2D):
 
 func spawn_pool() -> void:
 	var beer = pool_scene.instantiate()
-	beer.global_position = (global_position + velocity.normalized() * -1)
-	beer.rotation = (velocity * -1).angle()
+	beer.global_position = global_position
 	get_tree().root.add_child(beer)
 
 # Signals

@@ -35,37 +35,68 @@ spawn_point = NodePath("SpawnPoint")
 [node name="1" type="Node" parent="EnemyManager/PathHolder" index="0"]
 
 [node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/1" index="0"]
-position = Vector2(957, 1065)
+position = Vector2(983, 1191)
 
 [node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/1" index="1"]
-position = Vector2(461, 1055)
+position = Vector2(971, 1763)
+
+[node name="Node2D3" type="Node2D" parent="EnemyManager/PathHolder/1" index="2"]
+position = Vector2(496, 1425)
 
 [node name="2" type="Node" parent="EnemyManager/PathHolder" index="1"]
 
 [node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/2" index="0"]
-position = Vector2(2169, 1218)
+position = Vector2(2907, 2062)
 
 [node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/2" index="1"]
-position = Vector2(2157, 1618)
+position = Vector2(2278, 2088)
+
+[node name="Node2D3" type="Node2D" parent="EnemyManager/PathHolder/2" index="2"]
+position = Vector2(2849, 1598)
 
 [node name="3" type="Node" parent="EnemyManager/PathHolder" index="2"]
 
 [node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/3" index="0"]
-position = Vector2(445, 1663)
+position = Vector2(-60, 2042)
 
 [node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/3" index="1"]
-position = Vector2(900, 1671)
+position = Vector2(-50, 1605)
+
+[node name="Node2D3" type="Node2D" parent="EnemyManager/PathHolder/3" index="2"]
+position = Vector2(500, 2052)
 
 [node name="4" type="Node" parent="EnemyManager/PathHolder" index="3"]
 
 [node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/4" index="0"]
-position = Vector2(2277, 715)
+position = Vector2(2312, 891)
 
 [node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/4" index="1"]
-position = Vector2(2701, 989)
+position = Vector2(2696, 1161)
 
 [node name="Node2D3" type="Node2D" parent="EnemyManager/PathHolder/4" index="2"]
-position = Vector2(2803, 638)
+position = Vector2(2848, 744)
+
+[node name="5" type="Node" parent="EnemyManager/PathHolder" index="4"]
+
+[node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/5" index="0"]
+position = Vector2(-166, 830)
+
+[node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/5" index="1"]
+position = Vector2(344, 930)
+
+[node name="Node2D3" type="Node2D" parent="EnemyManager/PathHolder/5" index="2"]
+position = Vector2(-21, 1188)
+
+[node name="6" type="Node" parent="EnemyManager/PathHolder" index="5"]
+
+[node name="Node2D" type="Node2D" parent="EnemyManager/PathHolder/6" index="0"]
+position = Vector2(1850, 1183)
+
+[node name="Node2D2" type="Node2D" parent="EnemyManager/PathHolder/6" index="1"]
+position = Vector2(2219, 1426)
+
+[node name="Node2D3" type="Node2D" parent="EnemyManager/PathHolder/6" index="2"]
+position = Vector2(1875, 1778)
 
 [node name="SpawnPoint" type="Node2D" parent="EnemyManager" index="3"]
 position = Vector2(1401, 2196)
