@@ -38,8 +38,8 @@ func update_patron_targets():
 
 #Signals
 func on_patron_death(patron: Patron):
+	paths.append(patron.path.duplicate())
 	patrons = patrons.filter(func (p): return p != patron)
-	paths.append(patron.path)
 	update_patron_targets()
 	patron.queue_free()
 	

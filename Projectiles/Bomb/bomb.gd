@@ -19,7 +19,6 @@ var _blowing_up = false
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
-	#connect("body_entered", _on_body_entered)
 	timer.connect("timeout", _on_timer_timeout)
 	timer.start(fuse_time)
 
@@ -48,7 +47,7 @@ func blow_up():
 		var start_pos = global_position + movement.normalized()
 		var fragment_curr = fragment.instantiate()
 		fragment_curr.fire(start_pos, movement)
-		get_tree().root.add_child(fragment_curr)
+		get_tree().root.get_child(1).add_child(fragment_curr)
 	
 	queue_free()
 	
@@ -58,13 +57,8 @@ func spawn_pool() -> void:
 	var burn = pool_scene.instantiate()
 	burn.global_position = (global_position + _velocity.normalized() * -1)
 	burn.rotation = (_velocity * -1).angle()
-	get_tree().root.add_child(burn)
+	get_tree().root.get_child(1).add_child(burn)
 	
 #Signals
 func _on_timer_timeout():
 	blow_up()
-
-#func _on_body_entered(body: Node2D):
-	#if body.is_in_group("Hitable"):
-		#body.hit()
-	#call_deferred("blow_up")

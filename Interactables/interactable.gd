@@ -3,11 +3,13 @@ class_name Interactable
 
 signal done_interacting
 
-@export var duration: float = 2
+@export var base_duration: float = 2
 @export var pay: int = 1
+var duration: float = 0
 var progress: float = 0
 var in_range: bool = false
 var is_interacting: bool = false
+var is_small_from_start: bool = false
 
 @onready var cleaning_bar: TextureProgressBar = null
 
@@ -16,10 +18,24 @@ var is_interacting: bool = false
 
 func _ready():
 	var timer = $Timer
-	if big_sprite:
-		big_sprite.visible = true
-	if small_sprite:
-		small_sprite.visible = false
+	duration = base_duration
+	if randi() % 2 == 0:
+		is_small_from_start = false
+	else:
+		is_small_from_start = true
+		duration = duration / 2
+	
+	if is_small_from_start:
+		if big_sprite:
+			big_sprite.visible = false
+		if small_sprite:
+			small_sprite.visible = true
+	else:
+		if big_sprite:
+			big_sprite.visible = true
+		if small_sprite:
+			small_sprite.visible = false
+			
 	if timer:
 		timer.connect("timeout", _on_timer_timeout)
 	self.connect("body_entered", _on_body_entered)
@@ -34,16 +50,17 @@ func _process(_delta):
 				cleaning_bar.visible = true
 		if is_interacting and cleaning_bar:
 			cleaning_bar.value = duration - $Timer.time_left
-			if (duration - $Timer.time_left) >= duration / 2:
-				if big_sprite:
-					big_sprite.visible = false
-				if small_sprite:
-					small_sprite.visible = true
-			else:
-				if big_sprite:
-					big_sprite.visible = true
-				if small_sprite:
-					small_sprite.visible = false
+			if not is_small_from_start:
+				if (duration - $Timer.time_left) >= duration / 2:
+					if big_sprite:
+						big_sprite.visible = false
+					if small_sprite:
+						small_sprite.visible = true
+				else:
+					if big_sprite:
+						big_sprite.visible = true
+					if small_sprite:
+						small_sprite.visible = false
 	else:
 		if is_interacting:
 			is_interacting = false
@@ -84,5 +101,4 @@ func _on_timer_timeout():
 	if cleaning_bar:
 		cleaning_bar.visible = false
 		cleaning_bar.value = 0
-	EventBus.emit_signal("add_money", pay)
 	emit_signal("done_interacting")

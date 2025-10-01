@@ -2,6 +2,7 @@ extends Control
 class_name HealthBar
 
 var _health = 5
+var _max_health = 5
 var _hearts: Array[Heart] = []
 
 @onready var heart_container: HBoxContainer = $HeartContainer
@@ -15,6 +16,9 @@ func _on_player_hit():
 	_health -= 1
 	_hearts[_health].remove_health()
 
-func _on_player_heal():
-	_health += 2
-	_hearts[_health].add_health()
+func _on_player_heal(amount: int):
+	for i in range(amount):
+		if _health == _max_health:
+			break
+		_health += 1
+		_hearts[_health - 1].add_health()

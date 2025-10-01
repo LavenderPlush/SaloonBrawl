@@ -5,7 +5,7 @@ signal sandwich_eaten
 @onready var interactable: Interactable = $Interactable
 
 @export var hp_restored: int = 2
-var player: Node2D = null
+var player: Player = null
 
 func _ready() -> void:
 	interactable.connect("done_interacting", _on_eaten)
