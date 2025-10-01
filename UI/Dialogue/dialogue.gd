@@ -41,8 +41,8 @@ var mess_counter: int = 0
 func _ready() -> void:
 	timer.connect("timeout", _on_timeout)
 	EventBus.connect("add_mess", add_mess)
-	EventBus.connect("remove_mess", add_mess)
-	EventBus.connect("player_dead", add_mess)
+	EventBus.connect("remove_mess", remove_mess)
+	EventBus.connect("player_dead", player_dead)
 	EventBus.connect("player_hit", player_lose_hp)
 	voice_lines = voice_lines_raw.data
 	sprite.texture = face_calm

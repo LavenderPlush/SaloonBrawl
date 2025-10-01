@@ -18,7 +18,7 @@ func _on_area_entered(area: Area2D):
 			_remove_mess()
 
 func _remove_mess():
-	EventBus.emit_signal("remove_mess", type)
+	EventBus.emit_signal("remove_mess")
 	EventBus.emit_signal("add_money", pay)
 	queue_free()
 
