@@ -29,7 +29,7 @@ func spawn_blood() -> void:
 		* (blood_splat_min + randf() * blood_splat_max - blood_splat_min)
 	)
 	blood.rotation = (_movement * -1).angle()
-	get_tree().root.add_child(blood)
+	get_tree().root.get_child(1).add_child(blood)
 
 # Signals
 func _on_body_entered(body: Node2D) -> void:
