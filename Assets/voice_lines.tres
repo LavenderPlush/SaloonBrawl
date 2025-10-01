@@ -1,0 +1,13 @@
+[gd_resource type="JSON" format=3 uid="uid://bjj3ufkvcpm5v"]
+
+[resource]
+data = {
+"clean_up_beer": ["Clean that up, Rob!", "Hey Rob, you need to clean that up!", "Wipe that beer puddle up before it gets smelly!", "Rob, wipe that up!", "Shame about that beer...", "Oh no!", "Dammit!", "Shit!"],
+"clean_up_blood": ["Clean that up, Rob!", "Hey Rob, you need to clean that up!", "Gentlemen, could you just stop firing at each other for a moment?", "Oh well. More blood.", "Rob, wipe that up!", "Nice shot!", "That must've hurt!", "What a splash!", "Oh no!", "So much blood!", "Clean that shit up!"],
+"clean_up_burn": ["Clean that up, Rob!", "Hey Rob, you need to clean that up!", "A bomb just went off!", "What are you gonna do about that crater, Rob?", "That was a real blast!"],
+"clean_up_calm": ["Nice job!", "Good job!", "Well done!", "Well done Rob!", "As clean as new!", "Much better!"],
+"give_sandwich": ["I think you deserve a snack, Rob. Come pick it up.", "Another sandwich for you, Rob!", "Come pick up your sandwich!", "You hungry yet, Rob?", "You deserve a lunch break, Rob.", "Go grab something to eat, Rob!", "A sandwich is waiting for you here!", "Come to the bar for a bite to eat, Rob!"],
+"player_dead": ["Press R to restart!"],
+"player_low_hp": ["Don't get yourself killed!", "Rob, I still need you, don't get yourself killed!", "Watch out Rob, you're about to get yourself killed!", "Rob, watch out!", "Watch out for yourself!", "What are you doing?! You need to avoid those bullets!", "I didn't hire you to get yourself killed on your first shift!"],
+"tutorial": ["Come on Rob, do your job and clean that up! (Hold E)"]
+}

@@ -82,7 +82,8 @@ position = Vector2(-479, 668)
 shape = SubResource("RectangleShape2D_m888h")
 
 [node name="Background" type="Sprite2D" parent="." index="3"]
-z_index = -1
+z_index = -2
+z_as_relative = false
 position = Vector2(1409, 1152)
 texture = ExtResource("2_eu8as")
 
@@ -190,7 +191,7 @@ position = Vector2(1413, 1130)
 zoom = Vector2(0.48, 0.48)
 
 [node name="Barman" parent="." index="10" node_paths=PackedStringArray("manager") instance=ExtResource("2_5k6n7")]
-position = Vector2(1395, 400)
+position = Vector2(1012, 417.00003)
 manager = NodePath("../EnemyManager")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="11"]
