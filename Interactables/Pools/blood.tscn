@@ -8,6 +8,7 @@
 [node name="Blood" type="Node2D" groups=["Mess"]]
 script = ExtResource("2_lq2r4")
 type = "blood"
+pay = 1
 
 [node name="Interactable" parent="." node_paths=PackedStringArray("big_sprite", "small_sprite") instance=ExtResource("2_5xl8x")]
 scale = Vector2(0.6, 0.6)

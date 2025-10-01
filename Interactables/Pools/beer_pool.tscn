@@ -8,6 +8,7 @@
 [node name="BeerPool" type="Node2D" groups=["Mess"]]
 script = ExtResource("1_ksyha")
 type = "beer"
+pay = 1
 
 [node name="Interactable" parent="." node_paths=PackedStringArray("big_sprite", "small_sprite") instance=ExtResource("2_gsk4h")]
 scale = Vector2(0.64, 0.64)

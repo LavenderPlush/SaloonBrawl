@@ -7,7 +7,7 @@ extends Node
 signal add_money(amount: int)
 
 # Appends one mess
-signal add_mess()
+signal add_mess(type: String)
 # Removes one mess
 signal remove_mess()
 # Game over

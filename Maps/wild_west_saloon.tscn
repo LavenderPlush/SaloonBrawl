@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://bebswochjmdn6"]
+[gd_scene load_steps=12 format=4 uid="uid://bebswochjmdn6"]
 
 [ext_resource type="PackedScene" uid="uid://cggmu20aob1uq" path="res://Maps/Wild West Saloon.tmx" id="1_cm30e"]
 [ext_resource type="PackedScene" uid="uid://ds4sukpftjhcj" path="res://Characters/Barman/barman.tscn" id="2_5k6n7"]
 [ext_resource type="Texture2D" uid="uid://bv2g8etsfuqfs" path="res://Assets/saloon_background.png" id="2_eu8as"]
 [ext_resource type="PackedScene" uid="uid://dhyyi853mkcb3" path="res://Characters/Patron/patron_manager.tscn" id="3_tngpi"]
+[ext_resource type="PackedScene" uid="uid://bw81m81xepsal" path="res://GameManager/sandwich_manager.tscn" id="4_5k6n7"]
 [ext_resource type="PackedScene" uid="uid://cokg6av2uax0d" path="res://GameManager/game_manager.tscn" id="5_kqypi"]
 [ext_resource type="PackedScene" uid="uid://crj7p5vn5aya1" path="res://Interactables/Pools/beer_pool.tscn" id="6_5k6n7"]
 
@@ -200,3 +201,10 @@ navigation_polygon = SubResource("NavigationPolygon_kqypi")
 
 [node name="BeerPool" parent="." index="12" instance=ExtResource("6_5k6n7")]
 position = Vector2(1319, 975)
+type = ""
+
+[node name="SandwichManager" parent="." index="13" node_paths=PackedStringArray("spawn_position") instance=ExtResource("4_5k6n7")]
+spawn_position = NodePath("Node2D")
+
+[node name="Node2D" type="Node2D" parent="SandwichManager" index="1"]
+position = Vector2(991, 646)

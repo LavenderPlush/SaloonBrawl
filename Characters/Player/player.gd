@@ -3,6 +3,7 @@ class_name Player
 
 signal player_hit
 signal player_death
+signal player_heal
 
 @export var move_speed: int = 500
 @export var stun_duration: float = 1.0
@@ -79,6 +80,12 @@ func hit():
 	else:
 		EventBus.emit_signal("player_hit", _health)
 		player_hit.emit()
+
+func heal(amount: int) -> void:
+	_health += amount
+	if(_health > 5):
+		_health = 5
+	player_heal.emit(amount)
 
 func stun():
 	is_stunned = true

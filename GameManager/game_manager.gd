@@ -10,6 +10,7 @@ func _ready():
 	EventBus.connect("add_money", _on_get_money)
 	player.connect("player_hit", health_bar._on_player_hit)
 	player.connect("player_death", _on_player_death)
+	player.connect("player_heal", health_bar._on_player_heal)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("reload"):

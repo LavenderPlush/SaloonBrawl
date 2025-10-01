@@ -101,6 +101,8 @@ func _hide_speech():
 func add_mess(type: String):
 	mess_counter += 1
 	_mess_reaction()
+	if type == "":
+		return
 	_say_line("clean_up_" + type)
 	
 func remove_mess():

@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var interactable: Interactable = $Interactable
 @export var type: String
+@export var pay: int
 
 func _ready() -> void:
 	visible = false
@@ -18,6 +19,7 @@ func _on_area_entered(area: Area2D):
 
 func _remove_mess():
 	EventBus.emit_signal("remove_mess", type)
+	EventBus.emit_signal("add_money", pay)
 	queue_free()
 
 # Signals

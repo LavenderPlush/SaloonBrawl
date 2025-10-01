@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://rj66tmoqgckr"]
+
+[ext_resource type="Texture2D" uid="uid://dr6plusgbugju" path="res://Assets/saloon_asset_sandwitch.png" id="1_8v7wj"]
+[ext_resource type="Script" uid="uid://ccdclgybkdkum" path="res://Interactables/sandwich.gd" id="1_fyspf"]
+[ext_resource type="PackedScene" uid="uid://cb5dnqrlwef6q" path="res://Interactables/interactable.tscn" id="2_bvo6l"]
+
+[node name="Sandwitch" type="Node2D"]
+z_index = 1
+script = ExtResource("1_fyspf")
+
+[node name="Interactable" parent="." instance=ExtResource("2_bvo6l")]
+scale = Vector2(0.64, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+texture = ExtResource("1_8v7wj")
+
+[connection signal="body_entered" from="Interactable" to="." method="_on_body_entered"]

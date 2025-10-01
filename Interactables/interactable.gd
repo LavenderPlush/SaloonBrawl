@@ -101,5 +101,4 @@ func _on_timer_timeout():
 	if cleaning_bar:
 		cleaning_bar.visible = false
 		cleaning_bar.value = 0
-	EventBus.emit_signal("add_money", pay)
 	emit_signal("done_interacting")
