@@ -9,10 +9,8 @@ height = 60.0
 
 [node name="Beer" type="Area2D"]
 script = ExtResource("1_nojvw")
-beer_splat_max = 100.0
-beer_splat_min = 100.0
-move_base_speed = 500
-move_acceleration = 1.0
+move_base_speed = 600
+fuse_time = 2.5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_8uliq")
@@ -20,5 +18,7 @@ texture = ExtResource("2_8uliq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 3)
 shape = SubResource("CapsuleShape2D_6jhd0")
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

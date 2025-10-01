@@ -39,7 +39,7 @@ func shoot(target_pos: Vector2) -> void:
 		
 	var bullet = bullet_scene.instantiate()
 	bullet.fire(start_pos, movement, self)
-	get_tree().root.add_child(bullet)
+	get_tree().root.get_child(1).add_child(bullet)
 
 func _on_timer_timeout() -> void:
 	if len(targets) > 0:
