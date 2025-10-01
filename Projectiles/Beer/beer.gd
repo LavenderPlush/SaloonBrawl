@@ -29,7 +29,7 @@ func spawn_pool() -> void:
 		+ velocity.normalized() * -1
 		* (beer_splat_min + randf() * beer_splat_max - beer_splat_min))
 	beer.rotation = (velocity * -1).angle()
-	get_tree().root.add_child(beer)
+	get_tree().root.get_child(1).add_child(beer)
 
 # Signals
 func _on_body_entered(body: Node2D) -> void:
