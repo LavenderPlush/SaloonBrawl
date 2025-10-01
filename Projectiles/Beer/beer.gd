@@ -5,15 +5,18 @@ var velocity: Vector2 = Vector2.ZERO
 var direction: Vector2 = Vector2.ZERO
 var shooter_node: Node2D = null
 
-@export var beer_splat_max: float = 80.0
-@export var beer_splat_min: float = 50.0
-@export var move_base_speed: int = 100
-@export var move_acceleration: float = 1.05
+@export var move_base_speed: int = 300
+
+@export var fuse_time: float = 1.0
+@onready var timer: Timer = $Timer
 
 var pool_scene: PackedScene = preload("res://Interactables/Pools/beer_pool.tscn")
 
+func _ready() -> void:
+	timer.connect("timeout", _on_timer_timeout)
+	timer.start(fuse_time)
+
 func _physics_process(delta: float) -> void:
-	velocity *= move_acceleration
 	position += velocity * delta
 
 func fire(start_pos: Vector2, movement: Vector2, shooter: Node2D):
@@ -25,9 +28,7 @@ func fire(start_pos: Vector2, movement: Vector2, shooter: Node2D):
 
 func spawn_pool() -> void:
 	var beer = pool_scene.instantiate()
-	beer.global_position = (global_position
-		+ velocity.normalized() * -1
-		* (beer_splat_min + randf() * beer_splat_max - beer_splat_min))
+	beer.global_position = (global_position + velocity.normalized() * -1)
 	beer.rotation = (velocity * -1).angle()
 	get_tree().root.add_child(beer)
 
@@ -36,12 +37,19 @@ func _on_body_entered(body: Node2D) -> void:
 	if body == shooter_node:
 		return
 		
-	if body.is_in_group("Hitable"):
+	if body.is_in_group("Player"):
+		body.stun()
+		call_deferred("spawn_pool")
+		queue_free()
+		
+	if body.is_in_group("Hitable") && !body.is_in_group("Player"):
 		body.hit()
 		call_deferred("spawn_pool")
+		queue_free()
 		
 	if body.name == "Tiles":
-		call_deferred("spawn_pool")
-	
-	if body.name != "Furniture": #Remove when cartoony tables are added.
 		queue_free()
+		
+func _on_timer_timeout():
+	call_deferred("spawn_pool")
+	queue_free()
