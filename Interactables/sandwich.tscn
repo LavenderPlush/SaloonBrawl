@@ -7,12 +7,14 @@
 [node name="Sandwitch" type="Node2D"]
 z_index = 1
 script = ExtResource("1_fyspf")
+hp_restored = 3
 
 [node name="Interactable" parent="." instance=ExtResource("2_bvo6l")]
 scale = Vector2(0.64, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -2
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_8v7wj")
 
 [connection signal="body_entered" from="Interactable" to="." method="_on_body_entered"]

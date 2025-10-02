@@ -8,6 +8,7 @@ radius = 5.0
 height = 20.0
 
 [node name="Bullet" type="Area2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_t4uhm")
 blood_splat_max = 350.0
 blood_splat_min = 200.0
