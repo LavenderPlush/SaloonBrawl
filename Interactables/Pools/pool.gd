@@ -15,6 +15,7 @@ func _ready() -> void:
 func _on_area_entered(area: Area2D):
 	if area.get_parent().is_in_group("Mess"):
 		if area.get_rid() < interactable.get_rid():
+			interactable._set_pay(0)
 			_remove_mess()
 			
 
