@@ -16,10 +16,11 @@ func _on_area_entered(area: Area2D):
 	if area.get_parent().is_in_group("Mess"):
 		if area.get_rid() < interactable.get_rid():
 			_remove_mess()
+			
 
 func _remove_mess():
 	EventBus.emit_signal("remove_mess")
-	EventBus.emit_signal("add_money", pay)
+	EventBus.emit_signal("add_money", interactable.pay)
 	queue_free()
 
 # Signals

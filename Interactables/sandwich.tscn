@@ -11,6 +11,7 @@ hp_restored = 3
 
 [node name="Interactable" parent="." instance=ExtResource("2_bvo6l")]
 scale = Vector2(0.64, 1)
+pay = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -2

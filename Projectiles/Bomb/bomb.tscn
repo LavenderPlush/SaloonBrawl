@@ -96,7 +96,7 @@ z_index = 1
 script = ExtResource("1_s2m16")
 move_base_speed = 600
 fuse_time = 2.5
-fragment_speed = 500
+fragment_speed = 450
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-16, -2)

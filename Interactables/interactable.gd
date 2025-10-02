@@ -75,6 +75,9 @@ func _process(_delta):
 			$Timer.stop()
 			if cleaning_bar:
 				cleaning_bar.visible = false
+
+func _set_pay(ammount: int):
+	pay = ammount
 	
 func _on_body_entered(object):
 	if object.is_in_group("Player"):
