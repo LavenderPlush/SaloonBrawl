@@ -16,7 +16,7 @@ func _ready() -> void:
 func _spawn_sandwich() -> void:
 	sandwich = sandwich_scene.instantiate()
 	sandwich.position = spawn_position.position
-	get_tree().root.add_child(sandwich)
+	get_tree().root.get_child(1).add_child(sandwich)
 	
 	if sandwich.has_signal("sandwich_eaten"):
 		sandwich.sandwich_eaten.connect(_on_eaten)

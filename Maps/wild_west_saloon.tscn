@@ -31,34 +31,34 @@ process_mode = 1
 [node name="WallLeft" type="StaticBody2D" parent="Walls" index="0" groups=["Walls"]]
 position = Vector2(-619, 27)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallLeft" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallLeft" index="0" groups=["Walls"]]
 position = Vector2(22, 1121)
 shape = SubResource("RectangleShape2D_5k6n7")
 
 [node name="WallRight" type="StaticBody2D" parent="Walls" index="1" groups=["Walls"]]
 position = Vector2(3399, 31)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRight" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRight" index="0" groups=["Walls"]]
 position = Vector2(22, 1121)
 shape = SubResource("RectangleShape2D_5k6n7")
 
 [node name="WallTop" type="StaticBody2D" parent="Walls" index="2" groups=["Walls"]]
 position = Vector2(0, -60)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallTop" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallTop" index="0" groups=["Walls"]]
 position = Vector2(1417, 194)
 shape = SubResource("RectangleShape2D_eu8as")
 
 [node name="WallBottom" type="StaticBody2D" parent="Walls" index="3" groups=["Walls"]]
 position = Vector2(-15, 2051)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallBottom" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallBottom" index="0" groups=["Walls"]]
 position = Vector2(1417, 194)
 shape = SubResource("RectangleShape2D_eu8as")
 
-[node name="Counter" type="StaticBody2D" parent="." index="1"]
+[node name="Counter" type="StaticBody2D" parent="." index="1" groups=["Walls"]]
 
-[node name="Shape" type="CollisionPolygon2D" parent="Counter" index="0"]
+[node name="Shape" type="CollisionPolygon2D" parent="Counter" index="0" groups=["Walls"]]
 polygon = PackedVector2Array(654, 222, 661, 736, 2158, 746, 2168, 222, 1995, 225, 1989, 546, 825, 552, 830, 220)
 
 [node name="Cacti" type="Node" parent="." index="2"]

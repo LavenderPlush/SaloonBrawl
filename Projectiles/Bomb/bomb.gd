@@ -19,6 +19,7 @@ var _blowing_up = false
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
+	connect("body_entered", _on_body_entered)
 	timer.connect("timeout", _on_timer_timeout)
 	timer.start(fuse_time)
 
@@ -62,3 +63,7 @@ func spawn_pool() -> void:
 #Signals
 func _on_timer_timeout():
 	blow_up()
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Walls"):
+		queue_free()
